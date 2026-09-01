@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remedios de dos siglos — Elena G. de White ante la ciencia actual</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --paper:#F1EFE4;
+    --paper-2:#EAE7D9;
+    --ink:#23241F;
+    --ink-soft:#54524A;
+    --forest:#2E4436;
+    --forest-2:#243729;
+    --forest-light:#4C6B54;
+    --gold:#9C7A34;
+    --amber:#B08A3E;
+    --amber-bg:#F3E9D2;
+    --green-bg:#E1E8DE;
+    --line:#D8D4C3;
+    --serif: "Fraunces", Georgia, serif;
+    --sans: "Inter", -apple-system, sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:17px;
+    line-height:1.6;
+  }
+  img,svg{display:block;max-width:100%;}
+  a{color:var(--forest);}
+  a:hover{color:var(--gold);}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 40px;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:var(--forest);
+    color:var(--paper);
+    padding:96px 0 76px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{position:relative;z-index:2;}
+  .hero-kicker{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:19px;
+    color:#C9D3C4;
+    margin:0 0 18px;
+  }
+  .hero h1{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:clamp(40px,6vw,64px);
+    line-height:1.05;
+    margin:0 0 22px;
+    max-width:14ch;
+  }
+  .hero p.lede{
+    font-size:19px;
+    max-width:52ch;
+    color:#DCE3D6;
+    margin:0 0 34px;
+  }
+  .hero-meta{
+    display:flex;
+    gap:36px;
+    flex-wrap:wrap;
+    border-top:1px solid rgba(241,239,228,0.25);
+    padding-top:22px;
+    font-size:14px;
+    color:#B9C4B2;
+  }
+  .hero-meta strong{
+    display:block;
+    color:var(--paper);
+    font-size:15px;
+    font-weight:500;
+    margin-bottom:2px;
+  }
+  .hero-scale{position:absolute;right:-40px;top:-30px;opacity:0.55;width:340px;}
+
+  /* ---------- FRAMING NOTE ---------- */
+  .framing{
+    background:var(--paper-2);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:52px 0;
+  }
+  .framing .wrap{display:grid;grid-template-columns:200px 1fr;gap:48px;align-items:start;}
+  .framing-label{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:17px;
+    color:var(--forest-light);
+    padding-top:2px;
+  }
+  .framing p{
+    max-width:66ch;
+    font-size:16.5px;
+    color:var(--ink-soft);
+    margin:0 0 14px;
+  }
+  .framing p:last-child{margin-bottom:0;}
+  .framing strong{color:var(--ink);font-weight:600;}
+
+  /* ---------- CHAPTER ---------- */
+  .chapter{
+    border-bottom:1px solid var(--line);
+    padding:64px 0;
+  }
+  .chapter-head{
+    display:flex;
+    align-items:baseline;
+    gap:18px;
+    margin-bottom:34px;
+  }
+  .chapter-num{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:22px;
+    color:var(--gold);
+  }
+  .chapter-title{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:32px;
+    margin:0;
+  }
+  .chapter-sub{
+    font-size:15px;
+    color:var(--ink-soft);
+    margin-top:-24px;
+    margin-bottom:34px;
+    padding-left:calc(22px + 18px + 1px);
+  }
+
+  .dialogue{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:0;
+    border:1px solid var(--line);
+  }
+  .quote-panel{
+    background:var(--forest);
+    color:var(--paper);
+    padding:40px 38px;
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+  }
+  .quote-panel .icon{width:34px;height:34px;color:#B9C4B2;}
+  .quote-panel blockquote{
+    font-family:var(--serif);
+    font-size:21px;
+    line-height:1.5;
+    margin:0;
+    color:#F4F2E6;
+  }
+  .quote-panel .cite{
+    font-size:13.5px;
+    color:#A9B7A2;
+    border-top:1px solid rgba(241,239,228,0.22);
+    padding-top:16px;
+  }
+  .quote-panel .cite a{color:#CBD6C4;}
+  .quote-panel .cite a:hover{color:#fff;}
+
+  .analysis-panel{
+    background:var(--paper);
+    padding:40px 42px;
+  }
+  .analysis-panel h4{
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:13.5px;
+    text-transform:none;
+    letter-spacing:0.01em;
+    color:var(--forest);
+    margin:0 0 8px;
+  }
+  .analysis-panel .block{margin-bottom:26px;}
+  .analysis-panel .block:last-child{margin-bottom:0;}
+  .analysis-panel p{margin:0 0 10px;font-size:15.5px;color:var(--ink);}
+  .analysis-panel ul{margin:0;padding-left:18px;font-size:15.5px;}
+  .analysis-panel li{margin-bottom:9px;}
+  .analysis-panel li:last-child{margin-bottom:0;}
+
+  .verdict{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:7px 14px 7px 12px;
+    border-radius:3px;
+    font-size:13.5px;
+    font-weight:500;
+  }
+  .verdict .dot{width:8px;height:8px;border-radius:50%;flex:none;}
+  .verdict.full{background:var(--green-bg);color:#1F3A2A;}
+  .verdict.full .dot{background:var(--forest-light);}
+  .verdict.partial{background:var(--amber-bg);color:#5A431C;}
+  .verdict.partial .dot{background:var(--amber);}
+
+  .infographic{
+    margin:24px 0 28px;
+    padding:20px 20px 16px;
+    background:var(--paper-2);
+    border:1px solid var(--line);
+  }
+  .infographic svg{margin:0 auto;}
+
+  .credit{
+    font-size:13px;
+    color:var(--ink-soft);
+    border-top:1px dashed var(--line);
+    padding-top:14px;
+    margin-top:26px;
+  }
+  .credit em{font-style:normal;color:var(--gold);}
+
+  .reflection{
+    background:var(--paper-2);
+    border-left:2px solid var(--gold);
+    padding:16px 20px;
+    font-size:15px;
+    color:var(--ink-soft);
+  }
+  .reflection strong{color:var(--ink);font-weight:600;}
+
+  /* ---------- SUMMARY TABLE ---------- */
+  .summary{padding:64px 0;background:var(--paper-2);border-bottom:1px solid var(--line);}
+  .summary h2{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:30px;
+    margin:0 0 8px;
+  }
+  .summary p.intro{color:var(--ink-soft);max-width:62ch;margin:0 0 32px;font-size:15.5px;}
+  table{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);}
+  th,td{text-align:left;padding:14px 18px;font-size:14.5px;border-bottom:1px solid var(--line);}
+  thead th{
+    font-weight:600;
+    color:var(--forest);
+    border-bottom:1px solid var(--ink);
+    font-size:13px;
+  }
+  tbody tr:last-child td{border-bottom:none;}
+  td.verdict-cell{white-space:nowrap;}
+
+  /* ---------- BIBLIOGRAPHY ---------- */
+  .biblio{padding:64px 0 80px;}
+  .biblio h2{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:30px;
+    margin:0 0 40px;
+  }
+  .biblio-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px 56px;
+  }
+  .biblio-group h5{
+    font-size:12.5px;
+    font-weight:600;
+    color:var(--gold);
+    letter-spacing:0.02em;
+    margin:0 0 14px;
+    padding-bottom:10px;
+    border-bottom:1px solid var(--line);
+  }
+  .biblio-group ul{list-style:none;margin:0;padding:0;}
+  .biblio-group li{margin-bottom:11px;font-size:14.5px;line-height:1.45;}
+  .biblio-group a{text-decoration:none;}
+  .biblio-group a:hover{text-decoration:underline;}
+  .biblio-group .who{color:var(--ink-soft);font-style:italic;font-size:13.5px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--forest-2);
+    color:#B9C4B2;
+    padding:40px 0;
+    font-size:13.5px;
+  }
+  footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+  footer strong{color:var(--paper);}
+
+  @media (max-width:820px){
+    .wrap{padding:0 22px;}
+    .dialogue{grid-template-columns:1fr;}
+    .framing .wrap{grid-template-columns:1fr;gap:14px;}
+    .chapter-sub{padding-left:0;}
+    .biblio-grid{grid-template-columns:1fr;}
+    .hero-scale{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="hero-scale" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <line x1="100" y1="10" x2="100" y2="120" stroke="#DCE3D6" stroke-width="1.5"/>
+    <line x1="30" y1="45" x2="170" y2="45" stroke="#DCE3D6" stroke-width="1.5"/>
+    <path d="M30 45 L14 78 Q30 90 46 78 Z" stroke="#DCE3D6" stroke-width="1.5" fill="none"/>
+    <path d="M170 45 L154 78 Q170 90 186 78 Z" stroke="#DCE3D6" stroke-width="1.5" fill="none"/>
+    <rect x="72" y="118" width="56" height="8" rx="1" stroke="#DCE3D6" stroke-width="1.5" fill="none"/>
+    <line x1="100" y1="126" x2="100" y2="136" stroke="#DCE3D6" stroke-width="1.5"/>
+  </svg>
+  <div class="wrap">
+    <p class="hero-kicker">Un ejercicio de análisis crítico</p>
+    <h1>Remedios de dos siglos</h1>
+    <p class="lede">Seis consejos de Elena G. de White sobre alimentación, movimiento, descanso, mente, aire y agua, puestos en la balanza de la evidencia científica actual.</p>
+    <div class="hero-meta">
+      <div><strong>Curso</strong>[Nombre de la asignatura]</div>
+      <div><strong>Grupo</strong>[Nombres de los integrantes]</div>
+      <div><strong>Institución</strong>Universidad de Montemorelos</div>
+      <div><strong>Entrega</strong>[Fecha]</div>
+    </div>
+  </div>
+</header>
+
+<section class="framing">
+  <div class="wrap">
+    <p class="framing-label">Antes de leer</p>
+    <div>
+      <p>Esta investigación <strong>no busca demostrar que Elena G. de White anticipó la medicina moderna</strong>. Busca identificar qué elementos de sus recomendaciones sobre estilo de vida son compatibles con la evidencia científica actual, cuáles requieren contextualización y matices, y cuáles pertenecen al ámbito de la fe y por tanto no pueden verificarse con métodos biomédicos.</p>
+      <p>Cada capítulo sigue el mismo recorrido: la cita original a la izquierda, y a la derecha su lectura en lenguaje sencillo, la evidencia que la respalda o la matiza —con fuentes de la OMS, el CDC y artículos revisados por pares— y una reflexión breve sobre su vigencia hoy.</p>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <!-- ================= CAPÍTULO I — ALIMENTACIÓN ================= -->
+  <section class="chapter" id="alimentacion">
+    <div class="wrap">
+      <div class="chapter-head">
+        <span class="chapter-num">I.</span>
+        <h2 class="chapter-title">Alimentación</h2>
+      </div>
+      <p class="chapter-sub">Cereales, frutas, frutos secos, legumbres y verduras</p>
+
+      <div class="dialogue">
+        <div class="quote-panel">
+          <svg class="icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20 34C20 22 12 14 6 10c0 14 6 20 14 24Z" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M20 34c0-12 8-20 14-24 0 14-6 20-14 24Z" stroke="currentColor" stroke-width="1.4"/>
+            <line x1="20" y1="34" x2="20" y2="18" stroke="currentColor" stroke-width="1.4"/>
+          </svg>
+          <blockquote>“Los cereales, las frutas carnosas, los frutos oleaginosos, las legumbres y las hortalizas constituyen el alimento escogido para nosotros por el Creador. Preparados del modo más sencillo y natural posible, son los comestibles más sanos y nutritivos.”</blockquote>
+          <div class="cite">Elena G. de White, <em>Consejos sobre el Régimen Alimenticio</em>, p. 95.<br>
+          <a href="https://es.slideshare.net/slideshow/consejos-sobre-el-regimen-alimenticio-pdf/267962485" target="_blank" rel="noopener">Consultar el texto original ↗</a></div>
+        </div>
+
+        <div class="analysis-panel">
+          <div class="block">
+            <h4>Qué significa</h4>
+            <p>White propone que la base cotidiana de la alimentación sean los alimentos de origen vegetal —granos enteros, frutas, verduras, legumbres y frutos secos— preparados de forma sencilla, evitando el exceso de procesamiento y condimentación.</p>
+          </div>
+
+          <div class="block">
+            <h4>Qué dice la evidencia</h4>
+            <ul>
+              <li>La OMS recomienda una dieta variada con abundantes frutas, verduras, legumbres, cereales integrales, nueces y semillas, limitando grasas poco saludables, azúcares libres y sodio (OMS, <a href="https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noopener">Alimentación saludable</a>).</li>
+              <li>Una revisión sistemática de 2023 encontró que las dietas basadas en plantas se asocian con menor presión arterial y mejores resultados cardiovasculares (<a href="https://pubmed.ncbi.nlm.nih.gov/37178356/" target="_blank" rel="noopener">Tomé-Carneiro y Visioli, 2023</a>).</li>
+              <li>Un metaanálisis de 24 cohortes mostró que sustituir alimentos de origen animal por frutos secos, legumbres y cereales integrales se asocia con menor riesgo cardiovascular y de diabetes tipo 2 (<a href="https://pubmed.ncbi.nlm.nih.gov/37968628/" target="_blank" rel="noopener">Neuenschwander et al., 2023</a>).</li>
+            </ul>
+          </div>
+
+          <div class="infographic">
+            <svg viewBox="0 0 480 150" width="100%" role="img" aria-label="Cinco grupos de alimentos base: cereales, frutas, frutos secos, legumbres y verduras">
+              <line x1="20" y1="120" x2="460" y2="120" stroke="#4C6B54" stroke-width="1"/>
+              <g stroke="#2E4436" stroke-width="1.3" fill="none" stroke-linecap="round">
+                <circle cx="60" cy="80" r="30" fill="#E1E8DE" stroke="#4C6B54" stroke-width="1"/>
+                <path d="M60 68v18M53 74l7-6 7 6M53 92l7-6 7 6"/>
+
+                <circle cx="150" cy="70" r="30" fill="#E1E8DE" stroke="#4C6B54" stroke-width="1"/>
+                <path d="M150 62a8 8 0 1 0 0.1 0Z M150 62c0-4 2-6 5-7"/>
+
+                <circle cx="240" cy="60" r="30" fill="#E1E8DE" stroke="#4C6B54" stroke-width="1"/>
+                <ellipse cx="240" cy="60" rx="8" ry="11"/>
+
+                <circle cx="330" cy="70" r="30" fill="#E1E8DE" stroke="#4C6B54" stroke-width="1"/>
+                <ellipse cx="325" cy="65" rx="5" ry="7"/>
+                <ellipse cx="335" cy="74" rx="5" ry="7"/>
+
+                <circle cx="420" cy="80" r="30" fill="#E1E8DE" stroke="#4C6B54" stroke-width="1"/>
+                <path d="M420 90c0-10 3-16 9-19-2 9-4 15-9 19Zm0 0c0-8-4-13-10-15 1 8 4 12 10 15Z"/>
+              </g>
+              <g font-family="Inter, sans-serif" font-size="12" fill="#54524A" text-anchor="middle">
+                <text x="60" y="140">Cereales</text>
+                <text x="150" y="140">Frutas</text>
+                <text x="240" y="140">Frutos secos</text>
+                <text x="330" y="140">Legumbres</text>
+                <text x="420" y="140">Verduras</text>
+              </g>
+              <text x="240" y="20" font-family="Fraunces, serif" font-style="italic" font-size="13" fill="#2E4436" text-anchor="middle">Alimentos mínimamente procesados</text>
+            </svg>
+          </div>
+
+          <div class="block">
+            <span class="verdict full"><span class="dot"></span>Respaldado por la evidencia actual</span>
+          </div>
+
+          <div class="reflection"><strong>Vigencia —</strong> la ciencia no respalda que estos alimentos hayan sido “escogidos por el Creador”, esa lectura pertenece a la fe. Pero el principio nutricional de dar prioridad a alimentos vegetales y poco procesados coincide, más de un siglo después, con uno de los pilares de la nutrición preventiva contemporánea.</div>
+
+          <div class="credit">Sección elaborada por: <em>[Nombre del integrante]</em></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CAPÍTULO II — EJERCICIO ================= -->
+  <section class="chapter" id="ejercicio">
+    <div class="wrap">
+      <div class="chapter-head">
+        <span class="chapter-num">II.</span>
+        <h2 class="chapter-title">Ejercicio</h2>
+      </div>
+      <p class="chapter-sub">Movimiento diario al aire libre</p>
+
+      <div class="dialogue">
+        <div class="quote-panel">
+          <svg class="icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <ellipse cx="12" cy="30" rx="5" ry="3" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M12 27 L15 18 L22 15" stroke="currentColor" stroke-width="1.4" fill="none"/>
+            <ellipse cx="27" cy="12" rx="5" ry="3" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M27 15 L24 22 L18 26" stroke="currentColor" stroke-width="1.4" fill="none"/>
+          </svg>
+          <blockquote>“Los de hábitos sedentarios deberían… hacer ejercicio cada día al aire libre, tanto en verano como en invierno. La marcha a pie es preferible a montar a caballo o pasear en coche… En muchos casos este ejercicio es más eficaz para la salud que los medicamentos.”</blockquote>
+          <div class="cite">Elena G. de White, <em>El Ministerio de Curación</em>, p. 202 aprox. (varía según edición).<br>
+          <a href="https://www.academia.edu/26028934/EL_MINISTERIO_DE_CURACI%C3%93N_Por_ELENA_G_de_WHITE" target="_blank" rel="noopener">Consultar el texto original ↗</a></div>
+        </div>
+
+        <div class="analysis-panel">
+          <div class="block">
+            <h4>Qué significa</h4>
+            <p>White plantea la actividad física regular —especialmente caminar al aire libre— como un hábito cotidiano de cuidado de la salud, no como una actividad ocasional o de rendimiento.</p>
+          </div>
+
+          <div class="block">
+            <h4>Qué dice la evidencia</h4>
+            <ul>
+              <li>La OMS confirma que la actividad física regular ayuda a prevenir enfermedades cardiovasculares, diabetes y algunos tipos de cáncer, y reduce síntomas de depresión y ansiedad, recomendando 150–300 minutos semanales de actividad moderada (OMS, <a href="https://www.who.int/es/news-room/fact-sheets/detail/physical-activity%E2%80%AF" target="_blank" rel="noopener">Actividad física</a>).</li>
+              <li>Una revisión de revisiones halló evidencia consistente de que la actividad física reduce síntomas de depresión y ansiedad (<a href="https://pubmed.ncbi.nlm.nih.gov/37790636/" target="_blank" rel="noopener">Wanjau et al., 2023</a>).</li>
+              <li>Un metaanálisis encontró una relación dosis-respuesta entre actividad física y menor riesgo de depresión, incluso por debajo de las cantidades recomendadas (<a href="https://pubmed.ncbi.nlm.nih.gov/35416941/" target="_blank" rel="noopener">Pearce et al., 2022</a>).</li>
+            </ul>
+          </div>
+
+          <div class="infographic">
+            <svg viewBox="0 0 480 130" width="100%" role="img" aria-label="Recomendación de la OMS: 150 a 300 minutos semanales de actividad física moderada">
+              <rect x="30" y="45" width="420" height="18" rx="3" fill="#EAE7D9" stroke="#D8D4C3"/>
+              <rect x="30" y="45" width="245" height="18" rx="3" fill="#4C6B54"/>
+              <line x1="275" y1="35" x2="275" y2="73" stroke="#9C7A34" stroke-width="1.4" stroke-dasharray="3 2"/>
+              <g font-family="Inter, sans-serif" font-size="12" fill="#54524A">
+                <text x="30" y="30">0 min</text>
+                <text x="410" y="30">300 min</text>
+                <text x="220" y="30" fill="#9C7A34" font-weight="600">150 min</text>
+              </g>
+              <text x="240" y="95" font-family="Inter, sans-serif" font-size="12.5" fill="#23241F" text-anchor="middle">Rango semanal recomendado de actividad moderada</text>
+              <text x="240" y="115" font-family="Inter, sans-serif" font-size="11.5" fill="#54524A" text-anchor="middle">↓ riesgo cardiovascular · ↓ riesgo de diabetes · ↑ salud mental</text>
+            </svg>
+          </div>
+
+          <div class="block">
+            <span class="verdict full"><span class="dot"></span>Fuertemente respaldado por la evidencia actual</span>
+          </div>
+
+          <div class="reflection"><strong>Vigencia —</strong> en una sociedad de trabajos sedentarios y pantallas, el llamado a caminar diariamente conserva plena vigencia. Eso sí: la frase “más eficaz que los medicamentos” no debe leerse como conclusión científica general; el ejercicio previene y ayuda a tratar ciertas condiciones, pero no reemplaza la atención médica.</div>
+
+          <div class="credit">Sección elaborada por: <em>[Nombre del integrante]</em></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CAPÍTULO III — DESCANSO Y SUEÑO ================= -->
+  <section class="chapter" id="descanso">
+    <div class="wrap">
+      <div class="chapter-head">
+        <span class="chapter-num">III.</span>
+        <h2 class="chapter-title">Descanso y sueño</h2>
+      </div>
+      <p class="chapter-sub">La regularidad de los hábitos diarios</p>
+
+      <div class="dialogue">
+        <div class="quote-panel">
+          <svg class="icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M26 10a12 12 0 1 0 4 22 10 10 0 0 1-4-22Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          </svg>
+          <blockquote>“Las horas irregulares para comer y dormir minan las fuerzas del cerebro.”</blockquote>
+          <div class="cite">Elena G. de White, <em>Consejos sobre el Régimen Alimenticio</em>, p. 125.<br>
+          <a href="https://es.slideshare.net/slideshow/consejos-sobre-el-regimen-alimenticio-pdf/267962485" target="_blank" rel="noopener">Consultar el texto original ↗</a></div>
+        </div>
+
+        <div class="analysis-panel">
+          <div class="block">
+            <h4>Qué significa</h4>
+            <p>La idea central es que la regularidad —comer y dormir a horas constantes— influye en el funcionamiento del organismo, más allá de la sola cantidad de horas de sueño.</p>
+          </div>
+
+          <div class="block">
+            <h4>Qué dice la evidencia</h4>
+            <ul>
+              <li>El CDC señala que la mayoría de los adultos necesita al menos 7 horas de sueño por noche, y que dormir poco de forma habitual se asocia con problemas de salud (CDC, <a href="https://www.cdc.gov/heart-disease/about/sleep-and-heart-health.html" target="_blank" rel="noopener">Sleep and Heart Health</a>).</li>
+              <li>Datos del NCHS (2024) muestran que cerca del 30.5% de los adultos en EE. UU. duerme menos de 7 horas en promedio (<a href="https://www.cdc.gov/nchs/products/databriefs/db559.htm" target="_blank" rel="noopener">CDC/NCHS, Short Sleep Duration</a>).</li>
+              <li>Un metaanálisis de 71 cohortes (3.8 millones de participantes) encontró que el menor riesgo cardiovascular se da alrededor de 7.5 horas de sueño por noche (<a href="https://pubmed.ncbi.nlm.nih.gov/36237900/" target="_blank" rel="noopener">Huang et al., 2022</a>).</li>
+            </ul>
+          </div>
+
+          <div class="infographic">
+            <svg viewBox="0 0 260 220" width="100%" style="margin:0 auto" role="img" aria-label="Reloj mostrando el rango de sueño recomendado de siete a nueve horas">
+              <circle cx="130" cy="100" r="72" fill="none" stroke="#D8D4C3" stroke-width="1"/>
+              <path d="M130 100 L130 28 A72 72 0 0 1 205 118 Z" fill="#E1E8DE" stroke="#4C6B54" stroke-width="1"/>
+              <line x1="130" y1="100" x2="130" y2="34" stroke="#23241F" stroke-width="1.6"/>
+              <line x1="130" y1="100" x2="185" y2="132" stroke="#23241F" stroke-width="1.6"/>
+              <circle cx="130" cy="100" r="2.5" fill="#23241F"/>
+              <g font-family="Inter, sans-serif" font-size="11" fill="#54524A">
+                <text x="130" y="20" text-anchor="middle">12</text>
+                <text x="205" y="103" text-anchor="middle">3</text>
+                <text x="130" y="185" text-anchor="middle">6</text>
+                <text x="58" y="103" text-anchor="middle">9</text>
+              </g>
+              <text x="130" y="210" font-family="Fraunces, serif" font-style="italic" font-size="14" fill="#2E4436" text-anchor="middle">7 a 9 horas recomendadas</text>
+            </svg>
+          </div>
+
+          <div class="block">
+            <span class="verdict full"><span class="dot"></span>Respaldado, con matices</span>
+          </div>
+
+          <div class="reflection"><strong>Vigencia —</strong> la importancia de dormir lo suficiente está bien establecida. Sin embargo, no puede afirmarse que la ciencia demuestre específicamente que “horarios irregulares destruyen las fuerzas del cerebro”; la evidencia actual es más precisa y matizada que esa formulación.</div>
+
+          <div class="credit">Sección elaborada por: <em>[Nombre del integrante]</em></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CAPÍTULO IV — MENTE Y CUERPO ================= -->
+  <section class="chapter" id="mente-cuerpo">
+    <div class="wrap">
+      <div class="chapter-head">
+        <span class="chapter-num">IV.</span>
+        <h2 class="chapter-title">Mente y cuerpo</h2>
+      </div>
+      <p class="chapter-sub">Una relación íntima</p>
+
+      <div class="dialogue">
+        <div class="quote-panel">
+          <svg class="icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="13" cy="13" r="8" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M22 30c3-4 6-6 6-10.5A6 6 0 0 0 17 16 6 6 0 0 0 6 19.5C6 24 9 26 12 30l10 4Z" stroke="currentColor" stroke-width="1.4"/>
+            <line x1="13" y1="21" x2="18" y2="21" stroke="currentColor" stroke-width="1.2" stroke-dasharray="1.5 2"/>
+          </svg>
+          <blockquote>“Muy íntima es la relación entre la mente y el cuerpo. Cuando una está afectada, el otro simpatiza con ella… Muchas enfermedades son el resultado de la depresión mental.”</blockquote>
+          <div class="cite">Elena G. de White, <em>El Ministerio de Curación</em>, p. 185.<br>
+          <a href="https://studylib.es/doc/8983477/el-ministerio-de-curaci%C3%B3n---elena-g.-white" target="_blank" rel="noopener">Consultar el texto original ↗</a></div>
+        </div>
+
+        <div class="analysis-panel">
+          <div class="block">
+            <h4>Qué significa</h4>
+            <p>White describe una interdependencia entre el estado emocional y la salud física: el desánimo o la tristeza sostenidos pueden manifestarse como enfermedad en el cuerpo.</p>
+          </div>
+
+          <div class="block">
+            <h4>Qué dice la evidencia</h4>
+            <ul>
+              <li>El CDC afirma que la salud mental está estrechamente relacionada con la salud física: la depresión aumenta el riesgo de enfermedades crónicas como diabetes, cardiopatías y accidente cerebrovascular, y la relación también opera en sentido inverso (CDC, <a href="https://www.cdc.gov/mental-health/about/index.html" target="_blank" rel="noopener">About Mental Health</a>).</li>
+              <li>La evidencia sobre actividad física (capítulo II) muestra beneficios simultáneos para la salud física y mental, lo que refuerza que ambas dimensiones no funcionan de forma aislada.</li>
+            </ul>
+          </div>
+
+          <div class="infographic">
+            <svg viewBox="0 0 380 140" width="100%" role="img" aria-label="Diagrama de conexión bidireccional entre mente y cuerpo">
+              <circle cx="90" cy="70" r="42" fill="#E1E8DE" stroke="#4C6B54" stroke-width="1"/>
+              <text x="90" y="66" font-family="Inter, sans-serif" font-size="12.5" fill="#23241F" text-anchor="middle" font-weight="600">Mente</text>
+              <text x="90" y="82" font-family="Inter, sans-serif" font-size="10.5" fill="#54524A" text-anchor="middle">ánimo, estrés</text>
+              <circle cx="290" cy="70" r="42" fill="#E1E8DE" stroke="#4C6B54" stroke-width="1"/>
+              <text x="290" y="66" font-family="Inter, sans-serif" font-size="12.5" fill="#23241F" text-anchor="middle" font-weight="600">Cuerpo</text>
+              <text x="290" y="82" font-family="Inter, sans-serif" font-size="10.5" fill="#54524A" text-anchor="middle">sistema inmune</text>
+              <line x1="134" y1="62" x2="246" y2="62" stroke="#9C7A34" stroke-width="1.3" marker-end="url(#arH)"/>
+              <line x1="246" y1="80" x2="134" y2="80" stroke="#9C7A34" stroke-width="1.3" marker-end="url(#arH)"/>
+              <defs>
+                <marker id="arH" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+                  <path d="M0 0 L6 3 L0 6 Z" fill="#9C7A34"/>
+                </marker>
+              </defs>
+            </svg>
+          </div>
+
+          <div class="block">
+            <span class="verdict full"><span class="dot"></span>Respaldado en su principio general</span>
+          </div>
+
+          <div class="reflection"><strong>Vigencia —</strong> no debe afirmarse que White “descubrió” la medicina psicosomática; es más preciso decir que su observación presenta una coincidencia conceptual con la comprensión actual de la interacción mente-cuerpo. Atender el estrés y las emociones es hoy parte reconocida del cuidado integral de la salud.</div>
+
+          <div class="credit">Sección elaborada por: <em>[Nombre del integrante]</em></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CAPÍTULO V — AIRE Y NATURALEZA ================= -->
+  <section class="chapter" id="aire-naturaleza">
+    <div class="wrap">
+      <div class="chapter-head">
+        <span class="chapter-num">V.</span>
+        <h2 class="chapter-title">Aire y naturaleza</h2>
+      </div>
+      <p class="chapter-sub">El ambiente como parte del cuidado de la salud</p>
+
+      <div class="dialogue">
+        <div class="quote-panel">
+          <svg class="icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20 34V16" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M20 16c0-6-8-6-8-12" stroke="currentColor" stroke-width="1.4" fill="none"/>
+            <path d="M20 22c0-5 7-5 7-11" stroke="currentColor" stroke-width="1.4" fill="none"/>
+            <path d="M20 28c0-4-6-4-6-9" stroke="currentColor" stroke-width="1.4" fill="none"/>
+          </svg>
+          <blockquote>“La influencia del aire puro y fresco hará que la sangre circule saludablemente por todo el sistema. Refresca el cuerpo… al mismo tiempo tiene una decisiva influencia sobre la mente, a la que imparte compostura y serenidad.”</blockquote>
+          <div class="cite">Elena G. de White, <em>Testimonios para la Iglesia</em>, t. 1, p. 702.<br>
+          <a href="https://m.egwwritings.org/es/book/182.1028" target="_blank" rel="noopener">Consultar el texto original ↗</a></div>
+        </div>
+
+        <div class="analysis-panel">
+          <div class="block">
+            <h4>Qué significa</h4>
+            <p>White asocia el aire puro y el contacto con espacios abiertos con la circulación saludable y con un efecto calmante sobre la mente.</p>
+          </div>
+
+          <div class="block">
+            <h4>Qué dice la evidencia</h4>
+            <ul>
+              <li>El CDC señala que una buena ventilación reduce la concentración de partículas respiratorias y la exposición a virus transmitidos por el aire (CDC, <a href="https://www.cdc.gov/niosh/ventilation/about/index.html" target="_blank" rel="noopener">Ventilation</a>; <a href="https://www.cdc.gov/respiratory-viruses/es/prevention/tomar-medidas-para-tener-aire-limpio-y-prevenir-los-virus-respiratorios.html" target="_blank" rel="noopener">Aire limpio y prevención</a>).</li>
+              <li>Una revisión sistemática encontró asociación entre la exposición a espacios verdes y menores síntomas depresivos (<a href="https://pubmed.ncbi.nlm.nih.gov/36325036/" target="_blank" rel="noopener">revisión sobre espacios verdes, 2022</a>).</li>
+              <li>Otra revisión encontró que el contacto con entornos naturales puede reducir la ansiedad, con un efecto que varía según el tipo y duración de la exposición (<a href="https://pubmed.ncbi.nlm.nih.gov/35334194/" target="_blank" rel="noopener">Zhang et al., 2022</a>).</li>
+            </ul>
+          </div>
+
+          <div class="infographic">
+            <svg viewBox="0 0 420 130" width="100%" role="img" aria-label="Aire interior que sale por una ventana hacia el exterior con un árbol">
+              <rect x="30" y="30" width="90" height="70" fill="none" stroke="#4C6B54" stroke-width="1"/>
+              <line x1="75" y1="30" x2="75" y2="100" stroke="#4C6B54" stroke-width="0.7"/>
+              <line x1="30" y1="65" x2="120" y2="65" stroke="#4C6B54" stroke-width="0.7"/>
+              <path d="M120 55 Q150 45 180 55" stroke="#9C7A34" stroke-width="1.3" fill="none" marker-end="url(#arA)"/>
+              <path d="M120 75 Q150 85 180 75" stroke="#9C7A34" stroke-width="1.3" fill="none" marker-end="url(#arA)"/>
+              <defs>
+                <marker id="arA" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+                  <path d="M0 0 L6 3 L0 6 Z" fill="#9C7A34"/>
+                </marker>
+              </defs>
+              <line x1="260" y1="100" x2="260" y2="60" stroke="#2E4436" stroke-width="2"/>
+              <circle cx="260" cy="45" r="24" fill="#E1E8DE" stroke="#4C6B54" stroke-width="1"/>
+              <g font-family="Inter, sans-serif" font-size="11.5" fill="#54524A">
+                <text x="75" y="115" text-anchor="middle">Interior</text>
+                <text x="260" y="118" text-anchor="middle">Exterior</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="block">
+            <span class="verdict partial"><span class="dot"></span>Respaldado, con dos matices distintos</span>
+          </div>
+
+          <div class="reflection"><strong>Vigencia —</strong> conviene separar dos ideas: la ventilación tiene evidencia sólida para la calidad del aire, mientras que el vínculo entre naturaleza y bienestar psicológico, aunque prometedor, muestra resultados más heterogéneos según el estudio.</div>
+
+          <div class="credit">Sección elaborada por: <em>[Nombre del integrante]</em></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CAPÍTULO VI — AGUA ================= -->
+  <section class="chapter" id="agua">
+    <div class="wrap">
+      <div class="chapter-head">
+        <span class="chapter-num">VI.</span>
+        <h2 class="chapter-title">Agua</h2>
+      </div>
+      <p class="chapter-sub">Una bendición exquisita, en su justa medida</p>
+
+      <div class="dialogue">
+        <div class="quote-panel">
+          <svg class="icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20 6c8 10 12 17 12 23a12 12 0 0 1-24 0c0-6 4-13 12-23Z" stroke="currentColor" stroke-width="1.4"/>
+          </svg>
+          <blockquote>“Estando sanos o enfermos, el agua pura es para nosotros una de las más exquisitas bendiciones del cielo. Su empleo conveniente favorece la salud.”</blockquote>
+          <div class="cite">Elena G. de White, <em>El Ministerio de Curación</em>, p. 181.<br>
+          <a href="https://www.academia.edu/26028934/EL_MINISTERIO_DE_CURACI%C3%93N_Por_ELENA_G_de_WHITE" target="_blank" rel="noopener">Consultar el texto original ↗</a></div>
+        </div>
+
+        <div class="analysis-panel">
+          <div class="block">
+            <h4>Qué significa</h4>
+            <p>White valora el agua como recurso fundamental para la salud, siempre que su uso sea “conveniente”: adecuado a la necesidad, no ilimitado.</p>
+          </div>
+
+          <div class="block">
+            <h4>Qué dice la evidencia</h4>
+            <ul>
+              <li>Una revisión sistemática de ensayos clínicos aleatorizados (JAMA Network Open, 2024) encontró beneficios potenciales de aumentar el consumo de agua —como en pérdida de peso y prevención de cálculos renales— pero concluyó que la evidencia aún es limitada y no respalda que más agua sea siempre mejor (<a href="https://pubmed.ncbi.nlm.nih.gov/39585691/" target="_blank" rel="noopener">Hakam et al., 2024</a>).</li>
+              <li>Otra revisión sobre promoción de la hidratación halló que las intervenciones ayudan a quienes toman poca agua a aumentar su ingesta de forma sostenida (<a href="https://pubmed.ncbi.nlm.nih.gov/36106814/" target="_blank" rel="noopener">revisión sobre hidratación, 2022</a>).</li>
+            </ul>
+          </div>
+
+          <div class="infographic">
+            <svg viewBox="0 0 200 160" width="100%" style="margin:0 auto" role="img" aria-label="Vaso de agua lleno hasta la mitad, ilustrando que más no siempre significa mejor">
+              <rect x="70" y="30" width="60" height="90" rx="4" fill="none" stroke="#4C6B54" stroke-width="1.2"/>
+              <rect x="72" y="70" width="56" height="48" fill="#E1E8DE"/>
+              <line x1="70" y1="70" x2="130" y2="70" stroke="#9C7A34" stroke-width="1.2" stroke-dasharray="3 2"/>
+              <text x="100" y="140" font-family="Fraunces, serif" font-style="italic" font-size="13.5" fill="#2E4436" text-anchor="middle">Más no siempre es mejor</text>
+            </svg>
+          </div>
+
+          <div class="block">
+            <span class="verdict partial"><span class="dot"></span>Parcialmente respaldado</span>
+          </div>
+
+          <div class="reflection"><strong>Vigencia —</strong> el principio de que la hidratación adecuada favorece la salud sigue vigente. Pero la evidencia moderna es más cautelosa que la cita: las necesidades de agua varían según la persona y el contexto, y no existe respaldo científico para la idea de que “cuanta más agua, más salud”. Este matiz es, en sí mismo, un buen ejercicio de pensamiento crítico.</div>
+
+          <div class="credit">Sección elaborada por: <em>[Nombre del integrante]</em></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= RESUMEN ================= -->
+<section class="summary" id="resumen">
+  <div class="wrap">
+    <h2>Balance general</h2>
+    <p class="intro">Ningún consejo se acepta ni se descarta en bloque: cada uno se sostiene, se matiza o se contextualiza según lo que muestra la evidencia disponible hoy.</p>
+    <table>
+      <thead>
+        <tr><th>Consejo</th><th>Nivel de evidencia</th><th>Conclusión</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Alimentación vegetal</td><td>Alto</td><td class="verdict-cell"><span class="verdict full"><span class="dot"></span>Respaldado</span></td></tr>
+        <tr><td>Actividad física diaria</td><td>Muy alto</td><td class="verdict-cell"><span class="verdict full"><span class="dot"></span>Fuertemente respaldado</span></td></tr>
+        <tr><td>Descanso y sueño regular</td><td>Alto</td><td class="verdict-cell"><span class="verdict full"><span class="dot"></span>Respaldado, con matices</span></td></tr>
+        <tr><td>Relación mente-cuerpo</td><td>Alto</td><td class="verdict-cell"><span class="verdict full"><span class="dot"></span>Respaldado en principio general</span></td></tr>
+        <tr><td>Aire puro y naturaleza</td><td>Moderado a alto según el aspecto</td><td class="verdict-cell"><span class="verdict partial"><span class="dot"></span>Respaldado, contextualizado</span></td></tr>
+        <tr><td>Consumo de agua</td><td>Moderado / limitado</td><td class="verdict-cell"><span class="verdict partial"><span class="dot"></span>Parcialmente respaldado</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ================= BIBLIOGRAFÍA ================= -->
+<section class="biblio" id="bibliografia">
+  <div class="wrap">
+    <h2>Bibliografía</h2>
+    <div class="biblio-grid">
+
+      <div class="biblio-group">
+        <h5>Fuentes primarias — Elena G. de White</h5>
+        <ul>
+          <li>White, E. G. <em>Consejos sobre el Régimen Alimenticio.</em> <a href="https://es.slideshare.net/slideshow/consejos-sobre-el-regimen-alimenticio-pdf/267962485" target="_blank" rel="noopener">Texto digital ↗</a></li>
+          <li>White, E. G. <em>El Ministerio de Curación.</em> <a href="https://www.academia.edu/26028934/EL_MINISTERIO_DE_CURACI%C3%93N_Por_ELENA_G_de_WHITE" target="_blank" rel="noopener">Texto digital ↗</a></li>
+          <li>White, E. G. <em>El Ministerio de Curación</em> (edición alternativa). <a href="https://studylib.es/doc/8983477/el-ministerio-de-curaci%C3%B3n---elena-g.-white" target="_blank" rel="noopener">Texto digital ↗</a></li>
+          <li>White, E. G. <em>Testimonios para la Iglesia</em>, t. 1. <a href="https://m.egwwritings.org/es/book/182.1028" target="_blank" rel="noopener">Ellen G. White Writings ↗</a></li>
+        </ul>
+      </div>
+
+      <div class="biblio-group">
+        <h5>Organismos oficiales</h5>
+        <ul>
+          <li>World Health Organization (2026). <em>Healthy diet.</em> <a href="https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noopener">who.int ↗</a></li>
+          <li>World Health Organization (2024). <em>Physical activity.</em> <a href="https://www.who.int/es/news-room/fact-sheets/detail/physical-activity%E2%80%AF" target="_blank" rel="noopener">who.int ↗</a></li>
+          <li>Centers for Disease Control and Prevention (2024). <em>Sleep and Your Heart Health.</em> <a href="https://www.cdc.gov/heart-disease/about/sleep-and-heart-health.html" target="_blank" rel="noopener">cdc.gov ↗</a></li>
+          <li>CDC / NCHS (2026). <em>Short Sleep Duration and Sleep Difficulties Among Adults, 2024.</em> <a href="https://www.cdc.gov/nchs/products/databriefs/db559.htm" target="_blank" rel="noopener">cdc.gov ↗</a></li>
+          <li>Centers for Disease Control and Prevention. <em>About Mental Health.</em> <a href="https://www.cdc.gov/mental-health/about/index.html" target="_blank" rel="noopener">cdc.gov ↗</a></li>
+          <li>Centers for Disease Control and Prevention. <em>Ventilation and Respiratory Viruses.</em> <a href="https://www.cdc.gov/niosh/ventilation/about/index.html" target="_blank" rel="noopener">cdc.gov ↗</a></li>
+        </ul>
+      </div>
+
+      <div class="biblio-group">
+        <h5>Artículos científicos — alimentación y actividad física</h5>
+        <ul>
+          <li>Tomé-Carneiro, J. &amp; Visioli, F. (2023). <em>Plant-Based Diets Reduce Blood Pressure: A Systematic Review.</em> <a href="https://pubmed.ncbi.nlm.nih.gov/37178356/" target="_blank" rel="noopener">PubMed ↗</a></li>
+          <li>Neuenschwander, M. et al. (2023). <em>Substitution of animal-based with plant-based foods.</em> <a href="https://pubmed.ncbi.nlm.nih.gov/37968628/" target="_blank" rel="noopener">PubMed ↗</a></li>
+          <li>Wanjau, M. N. et al. (2023). <em>Physical Activity and Depression and Anxiety Disorders.</em> <a href="https://pubmed.ncbi.nlm.nih.gov/37790636/" target="_blank" rel="noopener">PubMed ↗</a></li>
+          <li>Pearce, M. et al. (2022). <em>Association Between Physical Activity and Risk of Depression.</em> <a href="https://pubmed.ncbi.nlm.nih.gov/35416941/" target="_blank" rel="noopener">PubMed ↗</a></li>
+        </ul>
+      </div>
+
+      <div class="biblio-group">
+        <h5>Artículos científicos — sueño, naturaleza y agua</h5>
+        <ul>
+          <li>Huang, T. et al. (2022). <em>Sleep duration and risk of cardio-cerebrovascular disease.</em> <a href="https://pubmed.ncbi.nlm.nih.gov/36237900/" target="_blank" rel="noopener">PubMed ↗</a></li>
+          <li>Zhang, X. et al. (2022). <em>Anxiety-alleviation benefits of exposure to the natural environment.</em> <a href="https://pubmed.ncbi.nlm.nih.gov/35334194/" target="_blank" rel="noopener">PubMed ↗</a></li>
+          <li>Bettmann, J. E. et al. (2024). <em>How Does Nature Exposure Affect Adults With Symptoms of Mental Illness?</em> <a href="https://pubmed.ncbi.nlm.nih.gov/36325036/" target="_blank" rel="noopener">PubMed ↗</a></li>
+          <li>Hakam, N. et al. (2024). <em>Outcomes in Randomized Clinical Trials Testing Changes in Daily Water Intake.</em> JAMA Network Open. <a href="https://pubmed.ncbi.nlm.nih.gov/39585691/" target="_blank" rel="noopener">PubMed ↗</a></li>
+          <li>Revisión sobre promoción de la hidratación (2022). <a href="https://pubmed.ncbi.nlm.nih.gov/36106814/" target="_blank" rel="noopener">PubMed ↗</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong>Remedios de dos siglos</strong><br>Trabajo de investigación — Universidad de Montemorelos</div>
+    <div>Nota metodológica: los elementos de fe (por ejemplo, la atribución de un alimento o remedio a un origen divino) no se someten a verificación biomédica en esta investigación; solo se contrastan sus componentes de estilo de vida.</div>
+  </div>
+</footer>
+
+</body>
+</html>
