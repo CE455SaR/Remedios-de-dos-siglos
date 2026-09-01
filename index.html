@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -121,7 +122,7 @@ button{
 
 .nav-links{
   display:flex;
-  gap:24px;
+  gap:22px;
   align-items:center;
 }
 
@@ -400,7 +401,7 @@ section{
 }
 
 /* =========================================================
-   SECTION HEADER
+   CHAPTER
 ========================================================= */
 
 .chapter{
@@ -464,6 +465,8 @@ section{
   box-shadow:var(--shadow);
 
   background:var(--white);
+
+  overflow:hidden;
 }
 
 /* =========================================================
@@ -589,6 +592,16 @@ section{
   margin-bottom:0;
 }
 
+.analysis a:not(.source-link){
+  color:var(--forest);
+  font-weight:600;
+  text-decoration:none;
+}
+
+.analysis a:not(.source-link):hover{
+  text-decoration:underline;
+}
+
 /* =========================================================
    VERDICT
 ========================================================= */
@@ -635,17 +648,19 @@ section{
 }
 
 /* =========================================================
-   INFOGRAPHIC
+   INFOGRAPHICS
 ========================================================= */
 
 .infographic{
   margin:35px 0;
 
-  background:var(--paper);
+  background:#f7f4eb;
 
   border:1px solid var(--line);
 
-  padding:24px;
+  padding:28px;
+
+  overflow:hidden;
 }
 
 .infographic-title{
@@ -657,9 +672,742 @@ section{
 
   color:var(--forest);
 
-  font-size:15px;
+  font-size:16px;
 
-  margin-bottom:20px;
+  margin-bottom:24px;
+}
+
+.infographic-note{
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
+  margin-top:10px;
+}
+
+/* =========================================================
+   FOOD INFOGRAPHIC
+========================================================= */
+
+.food-graphic{
+  display:grid;
+
+  grid-template-columns:repeat(5,1fr);
+
+  gap:14px;
+
+  align-items:end;
+}
+
+.food-item{
+  text-align:center;
+}
+
+.food-icon{
+  height:105px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin-bottom:10px;
+
+  position:relative;
+}
+
+.food-label{
+  color:#363731;
+
+  font-size:12px;
+
+  font-weight:600;
+}
+
+.food-icon svg{
+  width:76px;
+  height:76px;
+}
+
+@media(max-width:600px){
+
+  .food-graphic{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .food-item:last-child{
+    grid-column:1 / -1;
+  }
+
+}
+
+/* =========================================================
+   EXERCISE INFOGRAPHIC
+========================================================= */
+
+.activity-meter{
+  position:relative;
+
+  padding:35px 20px 20px;
+}
+
+.activity-track{
+  height:26px;
+
+  background:#e2ded2;
+
+  border-radius:13px;
+
+  position:relative;
+
+  overflow:visible;
+}
+
+.activity-fill{
+  position:absolute;
+
+  left:0;
+  top:0;
+
+  height:26px;
+
+  width:50%;
+
+  background:var(--forest);
+
+  border-radius:13px 0 0 13px;
+}
+
+.activity-target{
+  position:absolute;
+
+  left:50%;
+  top:-12px;
+
+  height:50px;
+
+  width:2px;
+
+  background:var(--gold);
+}
+
+.activity-target::before{
+  content:"";
+
+  position:absolute;
+
+  top:-24px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  white-space:nowrap;
+
+  font-size:12px;
+
+  color:var(--gold);
+
+  font-weight:700;
+
+}
+
+.activity-labels{
+  display:flex;
+
+  justify-content:space-between;
+
+  margin-top:14px;
+
+  font-size:12px;
+
+  color:var(--muted);
+}
+
+.activity-center{
+  text-align:center;
+
+  margin-top:25px;
+
+  font-family:var(--serif);
+
+  font-size:18px;
+
+  color:var(--forest);
+}
+
+/* =========================================================
+   SLEEP INFOGRAPHIC
+========================================================= */
+
+.sleep-graphic{
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:35px;
+
+  padding:15px 0 5px;
+}
+
+.clock{
+  width:150px;
+  height:150px;
+
+  border:5px solid var(--forest);
+
+  border-radius:50%;
+
+  position:relative;
+
+  background:var(--white);
+}
+
+.clock::before,
+.clock::after{
+  content:"";
+
+  position:absolute;
+
+  top:50%;
+  left:50%;
+
+  transform-origin:bottom center;
+
+  background:var(--forest);
+
+  border-radius:3px;
+}
+
+.clock::before{
+  width:4px;
+  height:48px;
+
+  transform:translate(-50%,-100%) rotate(0deg);
+}
+
+.clock::after{
+  width:4px;
+  height:38px;
+
+  transform:translate(-50%,-100%) rotate(120deg);
+}
+
+.clock-center{
+  position:absolute;
+
+  width:10px;
+  height:10px;
+
+  background:var(--gold);
+
+  border-radius:50%;
+
+  top:50%;
+  left:50%;
+
+  transform:translate(-50%,-50%);
+}
+
+.clock-number{
+  position:absolute;
+
+  font-size:11px;
+
+  color:var(--muted);
+
+  font-weight:600;
+}
+
+.clock-12{
+  top:7px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.clock-3{
+  right:8px;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.clock-6{
+  bottom:7px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.clock-9{
+  left:8px;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.sleep-copy{
+  max-width:240px;
+}
+
+.sleep-copy strong{
+  display:block;
+
+  font-family:var(--serif);
+
+  font-size:24px;
+
+  color:var(--forest);
+
+  margin-bottom:7px;
+}
+
+.sleep-copy span{
+  font-size:13px;
+
+  color:var(--muted);
+}
+
+@media(max-width:600px){
+
+  .sleep-graphic{
+    flex-direction:column;
+  }
+
+  .sleep-copy{
+    text-align:center;
+  }
+
+}
+
+/* =========================================================
+   MIND-BODY INFOGRAPHIC
+========================================================= */
+
+.mind-body{
+  position:relative;
+
+  min-height:190px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:10px 25px;
+}
+
+.mind-circle{
+  width:145px;
+  height:145px;
+
+  border-radius:50%;
+
+  border:2px solid var(--forest);
+
+  background:#e0e9df;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  flex-direction:column;
+
+  position:relative;
+
+  z-index:2;
+}
+
+.mind-circle strong{
+  font-family:var(--serif);
+
+  font-size:22px;
+
+  color:var(--forest);
+}
+
+.mind-circle span{
+  font-size:11px;
+
+  color:var(--muted);
+
+  margin-top:3px;
+}
+
+.mind-arrows{
+  position:absolute;
+
+  left:170px;
+  right:170px;
+
+  top:50%;
+
+  transform:translateY(-50%);
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:30px;
+}
+
+.arrow-line{
+  height:2px;
+
+  background:var(--gold);
+
+  position:relative;
+}
+
+.arrow-line::after{
+  content:"";
+
+  position:absolute;
+
+  right:0;
+  top:50%;
+
+  width:9px;
+  height:9px;
+
+  border-top:2px solid var(--gold);
+  border-right:2px solid var(--gold);
+
+  transform:translateY(-50%) rotate(45deg);
+}
+
+.arrow-line.reverse::after{
+  right:auto;
+  left:0;
+
+  transform:translateY(-50%) rotate(-135deg);
+}
+
+@media(max-width:600px){
+
+  .mind-body{
+    flex-direction:column;
+
+    gap:35px;
+  }
+
+  .mind-arrows{
+    position:static;
+
+    transform:none;
+
+    width:2px;
+
+    height:70px;
+
+    flex-direction:row;
+
+    gap:0;
+  }
+
+  .arrow-line{
+    display:none;
+  }
+
+}
+
+/* =========================================================
+   AIR INFOGRAPHIC
+========================================================= */
+
+.air-scene{
+  height:180px;
+
+  position:relative;
+
+  display:flex;
+
+  align-items:flex-end;
+
+  justify-content:space-around;
+
+  padding:0 35px 25px;
+
+  overflow:hidden;
+}
+
+.air-ground{
+  position:absolute;
+
+  bottom:20px;
+  left:20px;
+  right:20px;
+
+  height:2px;
+
+  background:var(--forest);
+}
+
+.air-house{
+  width:150px;
+  height:100px;
+
+  border:2px solid var(--forest);
+
+  position:relative;
+
+  background:var(--white);
+}
+
+.air-house::before{
+  content:"";
+
+  position:absolute;
+
+  width:108px;
+  height:108px;
+
+  border-left:2px solid var(--forest);
+  border-top:2px solid var(--forest);
+
+  transform:rotate(45deg);
+
+  top:-57px;
+  left:19px;
+}
+
+.air-window{
+  position:absolute;
+
+  width:34px;
+  height:34px;
+
+  border:2px solid var(--gold);
+
+  top:28px;
+  left:58px;
+
+  background:#f2e7cf;
+}
+
+.air-window::before{
+  content:"";
+
+  position:absolute;
+
+  top:50%;
+  left:0;
+  right:0;
+
+  height:1px;
+
+  background:var(--gold);
+}
+
+.air-window::after{
+  content:"";
+
+  position:absolute;
+
+  left:50%;
+  top:0;
+  bottom:0;
+
+  width:1px;
+
+  background:var(--gold);
+}
+
+.air-arrows{
+  display:flex;
+
+  flex-direction:column;
+
+  gap:12px;
+
+  align-items:center;
+}
+
+.wind{
+  width:95px;
+
+  height:2px;
+
+  background:var(--gold);
+
+  position:relative;
+}
+
+.wind::after{
+  content:"";
+
+  position:absolute;
+
+  right:0;
+  top:-4px;
+
+  width:8px;
+  height:8px;
+
+  border-top:2px solid var(--gold);
+  border-right:2px solid var(--gold);
+
+  transform:rotate(45deg);
+}
+
+.air-tree{
+  width:18px;
+  height:85px;
+
+  background:var(--forest);
+
+  position:relative;
+
+  border-radius:4px;
+}
+
+.air-tree::before,
+.air-tree::after{
+  content:"";
+
+  position:absolute;
+
+  width:75px;
+  height:75px;
+
+  border-radius:50%;
+
+  background:#dfe8de;
+  border:2px solid var(--forest);
+}
+
+.air-tree::before{
+  left:-29px;
+  top:-40px;
+}
+
+.air-tree::after{
+  left:-2px;
+  top:-55px;
+}
+
+.air-label{
+  position:absolute;
+
+  bottom:0;
+
+  font-size:12px;
+
+  color:var(--muted);
+
+  font-weight:600;
+}
+
+/* =========================================================
+   WATER INFOGRAPHIC
+========================================================= */
+
+.water-graphic{
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:55px;
+
+  padding:15px;
+}
+
+.water-glass{
+  width:105px;
+  height:145px;
+
+  border:3px solid var(--forest);
+
+  border-top:0;
+
+  border-radius:0 0 22px 22px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:rgba(255,255,255,.45);
+}
+
+.water-level{
+  position:absolute;
+
+  bottom:0;
+  left:0;
+  right:0;
+
+  height:62%;
+
+  background:#dce9e2;
+
+  border-top:2px solid var(--gold);
+}
+
+.water-wave{
+  position:absolute;
+
+  top:-7px;
+  left:-10px;
+
+  width:125px;
+  height:20px;
+
+  border-top:3px solid var(--forest);
+
+  border-radius:50%;
+}
+
+.water-drops{
+  display:flex;
+
+  flex-direction:column;
+
+  gap:12px;
+}
+
+.drop{
+  width:24px;
+  height:32px;
+
+  background:#dfe9df;
+
+  border:2px solid var(--forest);
+
+  border-radius:60% 60% 65% 65%;
+
+  transform:rotate(45deg);
+
+  position:relative;
+}
+
+.water-message{
+  max-width:210px;
+}
+
+.water-message strong{
+  display:block;
+
+  font-family:var(--serif);
+
+  font-size:21px;
+
+  color:var(--forest);
+
+  margin-bottom:8px;
+}
+
+.water-message span{
+  font-size:13px;
+
+  color:var(--muted);
+}
+
+@media(max-width:600px){
+
+  .water-graphic{
+    gap:25px;
+  }
+
 }
 
 /* =========================================================
@@ -1045,17 +1793,12 @@ footer p{
     <div class="nav-links">
 
       <a href="#alimentacion">Alimentación</a>
-
       <a href="#ejercicio">Ejercicio</a>
-
       <a href="#descanso">Sueño</a>
-
       <a href="#mente">Mente</a>
-
       <a href="#aire">Aire</a>
-
       <a href="#agua">Agua</a>
-
+      <a href="#resumen">Balance</a>
       <a href="#bibliografia">Fuentes</a>
 
     </div>
@@ -1100,7 +1843,6 @@ footer p{
       </a>
 
     </div>
-
 
     <div class="hero-meta">
 
@@ -1175,9 +1917,7 @@ footer p{
 
     <div class="chapter-header">
 
-      <div class="chapter-number">
-        I.
-      </div>
+      <div class="chapter-number">I.</div>
 
       <div>
 
@@ -1196,14 +1936,11 @@ footer p{
 
     <div class="dialogue">
 
-
       <div class="quote">
 
         <div>
 
-          <div class="quote-symbol">
-            “
-          </div>
+          <div class="quote-symbol">“</div>
 
           <blockquote>
             Los cereales, las frutas carnosas, los frutos oleaginosos,
@@ -1314,67 +2051,271 @@ footer p{
         </div>
 
 
+        <!-- GRÁFICO MEJORADO DE ALIMENTACIÓN -->
+
         <div class="infographic">
 
           <div class="infographic-title">
-            Cinco grupos destacados por White
+            Cinco grupos de alimentos destacados por White
           </div>
 
-          <svg
-            viewBox="0 0 600 170"
-            role="img"
-            aria-label="Cereales, frutas, frutos secos, legumbres y verduras">
+          <div class="food-graphic">
 
-            <line
-              x1="40"
-              y1="125"
-              x2="560"
-              y2="125"
-              stroke="#48634f"
-              stroke-width="1"/>
+            <!-- CEREALES -->
+            <div class="food-item">
 
-            <g
-              fill="#e0e9df"
-              stroke="#48634f"
-              stroke-width="1.5">
+              <div class="food-icon">
 
-              <circle cx="80" cy="85" r="34"/>
-              <circle cx="190" cy="75" r="34"/>
-              <circle cx="300" cy="65" r="34"/>
-              <circle cx="410" cy="75" r="34"/>
-              <circle cx="520" cy="85" r="34"/>
+                <svg viewBox="0 0 100 100" aria-hidden="true">
 
-            </g>
+                  <path
+                    d="M50 88 C48 65 47 38 50 14"
+                    fill="none"
+                    stroke="#263d30"
+                    stroke-width="4"
+                    stroke-linecap="round"/>
 
-            <g
-              font-family="DM Sans"
-              font-size="13"
-              fill="#363731"
-              text-anchor="middle">
+                  <path
+                    d="M49 35 C35 28 28 20 30 14"
+                    fill="none"
+                    stroke="#48634f"
+                    stroke-width="5"
+                    stroke-linecap="round"/>
 
-              <text x="80" y="145">
+                  <path
+                    d="M49 48 C65 41 72 32 70 25"
+                    fill="none"
+                    stroke="#48634f"
+                    stroke-width="5"
+                    stroke-linecap="round"/>
+
+                  <path
+                    d="M48 60 C34 54 27 47 29 40"
+                    fill="none"
+                    stroke="#48634f"
+                    stroke-width="5"
+                    stroke-linecap="round"/>
+
+                  <path
+                    d="M50 25 C61 18 66 12 64 8"
+                    fill="none"
+                    stroke="#a17b35"
+                    stroke-width="4"
+                    stroke-linecap="round"/>
+
+                </svg>
+
+              </div>
+
+              <div class="food-label">
                 Cereales
-              </text>
+              </div>
 
-              <text x="190" y="145">
+            </div>
+
+
+            <!-- FRUTAS -->
+            <div class="food-item">
+
+              <div class="food-icon">
+
+                <svg viewBox="0 0 100 100" aria-hidden="true">
+
+                  <circle
+                    cx="40"
+                    cy="55"
+                    r="25"
+                    fill="#e0e9df"
+                    stroke="#48634f"
+                    stroke-width="3"/>
+
+                  <circle
+                    cx="66"
+                    cy="58"
+                    r="22"
+                    fill="#f2e7cf"
+                    stroke="#a17b35"
+                    stroke-width="3"/>
+
+                  <path
+                    d="M52 32 C56 20 65 15 74 17"
+                    fill="none"
+                    stroke="#263d30"
+                    stroke-width="4"
+                    stroke-linecap="round"/>
+
+                  <path
+                    d="M60 25 C69 18 78 21 81 27"
+                    fill="none"
+                    stroke="#48634f"
+                    stroke-width="4"
+                    stroke-linecap="round"/>
+
+                  <circle
+                    cx="33"
+                    cy="48"
+                    r="3"
+                    fill="#a17b35"/>
+
+                  <circle
+                    cx="71"
+                    cy="54"
+                    r="3"
+                    fill="#48634f"/>
+
+                </svg>
+
+              </div>
+
+              <div class="food-label">
                 Frutas
-              </text>
+              </div>
 
-              <text x="300" y="145">
+            </div>
+
+
+            <!-- FRUTOS SECOS -->
+            <div class="food-item">
+
+              <div class="food-icon">
+
+                <svg viewBox="0 0 100 100" aria-hidden="true">
+
+                  <path
+                    d="M28 65 C20 48 30 28 48 26 C67 24 78 41 72 58 C67 74 42 79 28 65 Z"
+                    fill="#e9e5d7"
+                    stroke="#a17b35"
+                    stroke-width="3"/>
+
+                  <path
+                    d="M52 27 C48 42 49 57 58 70"
+                    fill="none"
+                    stroke="#48634f"
+                    stroke-width="3"/>
+
+                  <path
+                    d="M39 37 C35 47 37 58 42 65"
+                    fill="none"
+                    stroke="#48634f"
+                    stroke-width="2"/>
+
+                  <path
+                    d="M62 38 C66 48 65 58 62 64"
+                    fill="none"
+                    stroke="#48634f"
+                    stroke-width="2"/>
+
+                </svg>
+
+              </div>
+
+              <div class="food-label">
                 Frutos secos
-              </text>
+              </div>
 
-              <text x="410" y="145">
+            </div>
+
+
+            <!-- LEGUMBRES -->
+            <div class="food-item">
+
+              <div class="food-icon">
+
+                <svg viewBox="0 0 100 100" aria-hidden="true">
+
+                  <path
+                    d="M20 62 C22 45 38 34 57 36 C74 38 84 50 80 64 C75 81 48 85 31 77 C23 74 19 69 20 62 Z"
+                    fill="#e0e9df"
+                    stroke="#48634f"
+                    stroke-width="3"/>
+
+                  <circle
+                    cx="38"
+                    cy="58"
+                    r="8"
+                    fill="#f4f1e7"
+                    stroke="#a17b35"
+                    stroke-width="2"/>
+
+                  <circle
+                    cx="56"
+                    cy="52"
+                    r="8"
+                    fill="#f4f1e7"
+                    stroke="#a17b35"
+                    stroke-width="2"/>
+
+                  <circle
+                    cx="65"
+                    cy="67"
+                    r="8"
+                    fill="#f4f1e7"
+                    stroke="#a17b35"
+                    stroke-width="2"/>
+
+                </svg>
+
+              </div>
+
+              <div class="food-label">
                 Legumbres
-              </text>
+              </div>
 
-              <text x="520" y="145">
+            </div>
+
+
+            <!-- VERDURAS -->
+            <div class="food-item">
+
+              <div class="food-icon">
+
+                <svg viewBox="0 0 100 100" aria-hidden="true">
+
+                  <path
+                    d="M50 80 C49 61 48 42 50 25"
+                    fill="none"
+                    stroke="#263d30"
+                    stroke-width="4"/>
+
+                  <path
+                    d="M50 35 C37 25 26 25 20 34 C30 42 40 43 50 35 Z"
+                    fill="#dfe9df"
+                    stroke="#48634f"
+                    stroke-width="2"/>
+
+                  <path
+                    d="M50 43 C64 30 76 31 82 40 C71 48 60 50 50 43 Z"
+                    fill="#e0e9df"
+                    stroke="#48634f"
+                    stroke-width="2"/>
+
+                  <path
+                    d="M49 53 C36 45 25 48 22 57 C32 63 42 62 49 53 Z"
+                    fill="#dfe9df"
+                    stroke="#48634f"
+                    stroke-width="2"/>
+
+                  <path
+                    d="M51 59 C64 51 75 55 78 64 C67 68 58 67 51 59 Z"
+                    fill="#e0e9df"
+                    stroke="#48634f"
+                    stroke-width="2"/>
+
+                </svg>
+
+              </div>
+
+              <div class="food-label">
                 Verduras
-              </text>
+              </div>
 
-            </g>
+            </div>
 
-          </svg>
+          </div>
+
+          <div class="infographic-note">
+            Principio central: variedad, alimentos vegetales y preparación sencilla.
+          </div>
 
         </div>
 
@@ -1382,11 +2323,8 @@ footer p{
         <div class="analysis-block">
 
           <span class="verdict verdict-full">
-
             <span class="verdict-dot"></span>
-
             Respaldado por la evidencia actual
-
           </span>
 
         </div>
@@ -1423,9 +2361,7 @@ footer p{
 
     <div class="chapter-header">
 
-      <div class="chapter-number">
-        II.
-      </div>
+      <div class="chapter-number">II.</div>
 
       <div>
 
@@ -1444,23 +2380,18 @@ footer p{
 
     <div class="dialogue">
 
-
       <div class="quote">
 
         <div>
 
-          <div class="quote-symbol">
-            “
-          </div>
+          <div class="quote-symbol">“</div>
 
           <blockquote>
-
             Los de hábitos sedentarios deberían hacer ejercicio
             cada día al aire libre, tanto en verano como en invierno.
             La marcha a pie es preferible a montar a caballo o
             pasear en coche. En muchos casos este ejercicio es más
             eficaz para la salud que los medicamentos.
-
           </blockquote>
 
         </div>
@@ -1495,12 +2426,10 @@ footer p{
           </h3>
 
           <p>
-
             White plantea la actividad física regular,
             especialmente caminar, como un hábito cotidiano de
             cuidado de la salud y no solamente como una actividad
             deportiva.
-
           </p>
 
         </div>
@@ -1515,7 +2444,6 @@ footer p{
           <ul>
 
             <li>
-
               La OMS recomienda entre 150 y 300 minutos semanales
               de actividad física aeróbica moderada para adultos.
 
@@ -1527,11 +2455,9 @@ footer p{
                 rel="noopener">
                 OMS — Actividad física ↗
               </a>
-
             </li>
 
             <li>
-
               Una revisión de revisiones encontró evidencia
               consistente de beneficios de la actividad física
               sobre síntomas de depresión y ansiedad.
@@ -1544,11 +2470,9 @@ footer p{
                 rel="noopener">
                 Wanjau et al., 2023 — PubMed ↗
               </a>
-
             </li>
 
             <li>
-
               Un metaanálisis encontró una relación entre mayor
               actividad física y menor riesgo de depresión.
 
@@ -1560,7 +2484,6 @@ footer p{
                 rel="noopener">
                 Pearce et al., 2022 — PubMed ↗
               </a>
-
             </li>
 
           </ul>
@@ -1568,78 +2491,37 @@ footer p{
         </div>
 
 
+        <!-- GRÁFICO DE EJERCICIO -->
+
         <div class="infographic">
 
           <div class="infographic-title">
             Actividad física semanal recomendada por la OMS
           </div>
 
-          <svg
-            viewBox="0 0 600 150"
-            role="img"
-            aria-label="150 a 300 minutos de actividad física moderada">
+          <div class="activity-meter">
 
-            <rect
-              x="50"
-              y="55"
-              width="500"
-              height="22"
-              rx="4"
-              fill="#e9e5d7"/>
+            <div class="activity-track">
 
-            <rect
-              x="50"
-              y="55"
-              width="250"
-              height="22"
-              rx="4"
-              fill="#48634f"/>
+              <div class="activity-fill"></div>
 
-            <line
-              x1="300"
-              y1="43"
-              x2="300"
-              y2="90"
-              stroke="#a17b35"
-              stroke-width="2"
-              stroke-dasharray="4 3"/>
+              <div class="activity-target"></div>
 
-            <text
-              x="50"
-              y="35"
-              font-family="DM Sans"
-              font-size="13">
-              0 min
-            </text>
+            </div>
 
-            <text
-              x="280"
-              y="35"
-              font-family="DM Sans"
-              font-size="13"
-              fill="#a17b35"
-              font-weight="600">
-              150 min
-            </text>
+            <div class="activity-labels">
 
-            <text
-              x="515"
-              y="35"
-              font-family="DM Sans"
-              font-size="13">
-              300 min
-            </text>
+              <span>0 min</span>
+              <span>150 min</span>
+              <span>300 min</span>
 
-            <text
-              x="300"
-              y="120"
-              text-anchor="middle"
-              font-family="DM Sans"
-              font-size="13">
-              Rango semanal de actividad moderada
-            </text>
+            </div>
 
-          </svg>
+            <div class="activity-center">
+              150–300 minutos de actividad moderada por semana
+            </div>
+
+          </div>
 
         </div>
 
@@ -1647,11 +2529,8 @@ footer p{
         <div class="analysis-block">
 
           <span class="verdict verdict-full">
-
             <span class="verdict-dot"></span>
-
             Fuertemente respaldado por la evidencia actual
-
           </span>
 
         </div>
@@ -1691,9 +2570,7 @@ footer p{
 
     <div class="chapter-header">
 
-      <div class="chapter-number">
-        III.
-      </div>
+      <div class="chapter-number">III.</div>
 
       <div>
 
@@ -1712,20 +2589,15 @@ footer p{
 
     <div class="dialogue">
 
-
       <div class="quote">
 
         <div>
 
-          <div class="quote-symbol">
-            “
-          </div>
+          <div class="quote-symbol">“</div>
 
           <blockquote>
-
             Las horas irregulares para comer y dormir
             minan las fuerzas del cerebro.
-
           </blockquote>
 
         </div>
@@ -1760,12 +2632,10 @@ footer p{
           </h3>
 
           <p>
-
             La idea central es que la regularidad de los hábitos
             diarios puede influir en el funcionamiento del organismo.
             El descanso no depende únicamente de dormir suficientes
             horas, sino también de mantener hábitos saludables.
-
           </p>
 
         </div>
@@ -1780,7 +2650,6 @@ footer p{
           <ul>
 
             <li>
-
               El CDC señala que los adultos necesitan generalmente
               al menos 7 horas de sueño por noche y que dormir
               insuficientemente de forma habitual se relaciona
@@ -1794,11 +2663,9 @@ footer p{
                 rel="noopener">
                 CDC — Sleep and Heart Health ↗
               </a>
-
             </li>
 
             <li>
-
               Datos recientes del CDC/NCHS muestran que una parte
               importante de los adultos estadounidenses duerme
               menos de siete horas.
@@ -1811,11 +2678,9 @@ footer p{
                 rel="noopener">
                 CDC/NCHS — Short Sleep Duration ↗
               </a>
-
             </li>
 
             <li>
-
               Un metaanálisis de cohortes encontró asociaciones
               entre la duración del sueño y el riesgo cardiovascular.
 
@@ -1827,7 +2692,6 @@ footer p{
                 rel="noopener">
                 Huang et al., 2022 — PubMed ↗
               </a>
-
             </li>
 
           </ul>
@@ -1835,65 +2699,39 @@ footer p{
         </div>
 
 
+        <!-- GRÁFICO DE SUEÑO -->
+
         <div class="infographic">
 
           <div class="infographic-title">
             Sueño suficiente: una parte fundamental del cuidado de la salud
           </div>
 
-          <svg
-            viewBox="0 0 500 180"
-            role="img"
-            aria-label="Representación del sueño">
+          <div class="sleep-graphic">
 
-            <circle
-              cx="250"
-              cy="80"
-              r="60"
-              fill="none"
-              stroke="#d7d2c2"
-              stroke-width="2"/>
+            <div class="clock">
 
-            <path
-              d="M250 20
-                 A60 60 0 0 1 304 106
-                 L250 80 Z"
-              fill="#e0e9df"/>
+              <span class="clock-number clock-12">12</span>
+              <span class="clock-number clock-3">3</span>
+              <span class="clock-number clock-6">6</span>
+              <span class="clock-number clock-9">9</span>
 
-            <line
-              x1="250"
-              y1="80"
-              x2="250"
-              y2="28"
-              stroke="#263d30"
-              stroke-width="2"/>
+              <div class="clock-center"></div>
 
-            <line
-              x1="250"
-              y1="80"
-              x2="294"
-              y2="103"
-              stroke="#263d30"
-              stroke-width="2"/>
+            </div>
 
-            <circle
-              cx="250"
-              cy="80"
-              r="4"
-              fill="#263d30"/>
+            <div class="sleep-copy">
 
-            <text
-              x="250"
-              y="160"
-              text-anchor="middle"
-              font-family="Playfair Display"
-              font-style="italic"
-              font-size="17"
-              fill="#263d30">
-              Dormir lo suficiente importa
-            </text>
+              <strong>≥ 7 horas</strong>
 
-          </svg>
+              <span>
+                El CDC señala que los adultos necesitan generalmente
+                al menos siete horas de sueño por noche.
+              </span>
+
+            </div>
+
+          </div>
 
         </div>
 
@@ -1901,11 +2739,8 @@ footer p{
         <div class="analysis-block">
 
           <span class="verdict verdict-full">
-
             <span class="verdict-dot"></span>
-
             Respaldado, con matices
-
           </span>
 
         </div>
@@ -1943,9 +2778,7 @@ footer p{
 
     <div class="chapter-header">
 
-      <div class="chapter-number">
-        IV.
-      </div>
+      <div class="chapter-number">IV.</div>
 
       <div>
 
@@ -1964,21 +2797,16 @@ footer p{
 
     <div class="dialogue">
 
-
       <div class="quote">
 
         <div>
 
-          <div class="quote-symbol">
-            “
-          </div>
+          <div class="quote-symbol">“</div>
 
           <blockquote>
-
             Muy íntima es la relación entre la mente y el cuerpo.
             Cuando una está afectada, el otro simpatiza con ella…
             Muchas enfermedades son el resultado de la depresión mental.
-
           </blockquote>
 
         </div>
@@ -2013,11 +2841,9 @@ footer p{
           </h3>
 
           <p>
-
             White presenta una interacción entre el estado
             emocional y la salud física. El bienestar psicológico
             no aparece como algo separado del cuidado del cuerpo.
-
           </p>
 
         </div>
@@ -2032,7 +2858,6 @@ footer p{
           <ul>
 
             <li>
-
               El CDC reconoce una relación estrecha entre la salud
               mental y la salud física. La depresión puede aumentar
               el riesgo de enfermedades crónicas y la salud física
@@ -2046,15 +2871,12 @@ footer p{
                 rel="noopener">
                 CDC — About Mental Health ↗
               </a>
-
             </li>
 
             <li>
-
               La evidencia sobre actividad física también muestra
               beneficios simultáneos para la salud física y mental,
               reforzando la interacción entre ambas dimensiones.
-
             </li>
 
           </ul>
@@ -2062,84 +2884,45 @@ footer p{
         </div>
 
 
+        <!-- GRÁFICO MENTE-CUERPO -->
+
         <div class="infographic">
 
           <div class="infographic-title">
             La salud física y mental se influyen mutuamente
           </div>
 
-          <svg
-            viewBox="0 0 600 180"
-            role="img"
-            aria-label="Relación entre mente y cuerpo">
+          <div class="mind-body">
 
-            <circle
-              cx="150"
-              cy="90"
-              r="60"
-              fill="#e0e9df"
-              stroke="#48634f"/>
+            <div class="mind-circle">
 
-            <circle
-              cx="450"
-              cy="90"
-              r="60"
-              fill="#e0e9df"
-              stroke="#48634f"/>
+              <strong>Mente</strong>
 
-            <text
-              x="150"
-              y="86"
-              text-anchor="middle"
-              font-family="DM Sans"
-              font-weight="600">
-              Mente
-            </text>
+              <span>
+                ánimo · estrés
+              </span>
 
-            <text
-              x="150"
-              y="108"
-              text-anchor="middle"
-              font-family="DM Sans"
-              font-size="12">
-              ánimo · estrés
-            </text>
+            </div>
 
-            <text
-              x="450"
-              y="86"
-              text-anchor="middle"
-              font-family="DM Sans"
-              font-weight="600">
-              Cuerpo
-            </text>
+            <div class="mind-arrows">
 
-            <text
-              x="450"
-              y="108"
-              text-anchor="middle"
-              font-family="DM Sans"
-              font-size="12">
-              salud física
-            </text>
+              <div class="arrow-line"></div>
 
-            <line
-              x1="215"
-              y1="75"
-              x2="380"
-              y2="75"
-              stroke="#a17b35"
-              stroke-width="2"/>
+              <div class="arrow-line reverse"></div>
 
-            <line
-              x1="380"
-              y1="105"
-              x2="215"
-              y2="105"
-              stroke="#a17b35"
-              stroke-width="2"/>
+            </div>
 
-          </svg>
+            <div class="mind-circle">
+
+              <strong>Cuerpo</strong>
+
+              <span>
+                salud física
+              </span>
+
+            </div>
+
+          </div>
 
         </div>
 
@@ -2147,11 +2930,8 @@ footer p{
         <div class="analysis-block">
 
           <span class="verdict verdict-full">
-
             <span class="verdict-dot"></span>
-
             Respaldado en su principio general
-
           </span>
 
         </div>
@@ -2187,9 +2967,7 @@ footer p{
 
     <div class="chapter-header">
 
-      <div class="chapter-number">
-        V.
-      </div>
+      <div class="chapter-number">V.</div>
 
       <div>
 
@@ -2208,22 +2986,17 @@ footer p{
 
     <div class="dialogue">
 
-
       <div class="quote">
 
         <div>
 
-          <div class="quote-symbol">
-            “
-          </div>
+          <div class="quote-symbol">“</div>
 
           <blockquote>
-
             La influencia del aire puro y fresco hará que la sangre
             circule saludablemente por todo el sistema. Refresca el
             cuerpo… al mismo tiempo tiene una decisiva influencia
             sobre la mente, a la que imparte compostura y serenidad.
-
           </blockquote>
 
         </div>
@@ -2258,10 +3031,8 @@ footer p{
           </h3>
 
           <p>
-
             White relaciona el aire fresco y los espacios abiertos
             con el bienestar físico y mental.
-
           </p>
 
         </div>
@@ -2276,7 +3047,6 @@ footer p{
           <ul>
 
             <li>
-
               El CDC señala que una ventilación adecuada puede
               reducir la concentración de partículas respiratorias
               en espacios interiores.
@@ -2289,11 +3059,9 @@ footer p{
                 rel="noopener">
                 CDC — Ventilation ↗
               </a>
-
             </li>
 
             <li>
-
               Revisiones académicas han estudiado asociaciones
               entre exposición a espacios verdes y bienestar
               psicológico.
@@ -2306,11 +3074,9 @@ footer p{
                 rel="noopener">
                 Revisión sobre naturaleza y salud mental — PubMed ↗
               </a>
-
             </li>
 
             <li>
-
               Otra revisión ha encontrado posibles beneficios
               de la exposición a entornos naturales sobre la ansiedad,
               aunque los resultados dependen del tipo y duración
@@ -2324,7 +3090,6 @@ footer p{
                 rel="noopener">
                 Zhang et al., 2022 — PubMed ↗
               </a>
-
             </li>
 
           </ul>
@@ -2332,79 +3097,39 @@ footer p{
         </div>
 
 
+        <!-- GRÁFICO AIRE -->
+
         <div class="infographic">
 
           <div class="infographic-title">
             Calidad del aire y contacto con la naturaleza
           </div>
 
-          <svg
-            viewBox="0 0 600 170"
-            role="img"
-            aria-label="Interior y exterior">
+          <div class="air-scene">
 
-            <rect
-              x="55"
-              y="40"
-              width="120"
-              height="80"
-              fill="none"
-              stroke="#48634f"
-              stroke-width="2"/>
+            <div class="air-house">
 
-            <line
-              x1="115"
-              y1="40"
-              x2="115"
-              y2="120"
-              stroke="#48634f"/>
+              <div class="air-window"></div>
 
-            <line
-              x1="175"
-              y1="80"
-              x2="370"
-              y2="80"
-              stroke="#a17b35"
-              stroke-width="2"/>
+            </div>
 
-            <path
-              d="M370 80 L355 73 L355 87 Z"
-              fill="#a17b35"/>
+            <div class="air-arrows">
 
-            <line
-              x1="450"
-              y1="120"
-              x2="450"
-              y2="70"
-              stroke="#263d30"
-              stroke-width="4"/>
+              <div class="wind"></div>
+              <div class="wind"></div>
+              <div class="wind"></div>
 
-            <circle
-              cx="450"
-              cy="58"
-              r="32"
-              fill="#e0e9df"
-              stroke="#48634f"/>
+            </div>
 
-            <text
-              x="115"
-              y="145"
-              text-anchor="middle"
-              font-family="DM Sans"
-              font-size="13">
-              Interior
-            </text>
+            <div class="air-tree"></div>
 
-            <text
-              x="450"
-              y="145"
-              text-anchor="middle"
-              font-family="DM Sans"
-              font-size="13">
-              Exterior
-            </text>
+            <div class="air-label">
+              Interior → exterior
+            </div>
 
-          </svg>
+            <div class="air-ground"></div>
+
+          </div>
 
         </div>
 
@@ -2412,11 +3137,8 @@ footer p{
         <div class="analysis-block">
 
           <span class="verdict verdict-partial">
-
             <span class="verdict-dot"></span>
-
             Respaldado, con contextualización
-
           </span>
 
         </div>
@@ -2452,9 +3174,7 @@ footer p{
 
     <div class="chapter-header">
 
-      <div class="chapter-number">
-        VI.
-      </div>
+      <div class="chapter-number">VI.</div>
 
       <div>
 
@@ -2473,21 +3193,16 @@ footer p{
 
     <div class="dialogue">
 
-
       <div class="quote">
 
         <div>
 
-          <div class="quote-symbol">
-            “
-          </div>
+          <div class="quote-symbol">“</div>
 
           <blockquote>
-
             Estando sanos o enfermos, el agua pura es para nosotros
             una de las más exquisitas bendiciones del cielo.
             Su empleo conveniente favorece la salud.
-
           </blockquote>
 
         </div>
@@ -2522,12 +3237,10 @@ footer p{
           </h3>
 
           <p>
-
             White presenta el agua como un recurso fundamental
             para la salud y utiliza la expresión “empleo conveniente”,
             lo que puede interpretarse como un uso adecuado a las
             necesidades de cada persona.
-
           </p>
 
         </div>
@@ -2542,7 +3255,6 @@ footer p{
           <ul>
 
             <li>
-
               Una revisión sistemática de ensayos clínicos encontró
               beneficios potenciales de aumentar el consumo de agua
               en determinados resultados, aunque también señaló
@@ -2556,14 +3268,11 @@ footer p{
                 rel="noopener">
                 Hakam et al., 2024 — PubMed ↗
               </a>
-
             </li>
 
             <li>
-
               La evidencia disponible no indica que consumir cantidades
               cada vez mayores de agua sea automáticamente más saludable.
-
             </li>
 
           </ul>
@@ -2571,55 +3280,46 @@ footer p{
         </div>
 
 
+        <!-- GRÁFICO AGUA -->
+
         <div class="infographic">
 
           <div class="infographic-title">
             Hidratación adecuada: más no siempre significa mejor
           </div>
 
-          <svg
-            viewBox="0 0 300 220"
-            role="img"
-            aria-label="Vaso de agua">
+          <div class="water-graphic">
 
-            <rect
-              x="95"
-              y="35"
-              width="110"
-              height="130"
-              rx="6"
-              fill="none"
-              stroke="#48634f"
-              stroke-width="2"/>
+            <div class="water-glass">
 
-            <rect
-              x="98"
-              y="90"
-              width="104"
-              height="72"
-              fill="#e0e9df"/>
+              <div class="water-level">
 
-            <line
-              x1="95"
-              y1="90"
-              x2="205"
-              y2="90"
-              stroke="#a17b35"
-              stroke-width="2"
-              stroke-dasharray="5 4"/>
+                <div class="water-wave"></div>
 
-            <text
-              x="150"
-              y="195"
-              text-anchor="middle"
-              font-family="Playfair Display"
-              font-style="italic"
-              font-size="16"
-              fill="#263d30">
-              Hidratación adecuada
-            </text>
+              </div>
 
-          </svg>
+            </div>
+
+            <div class="water-drops">
+
+              <div class="drop"></div>
+              <div class="drop"></div>
+              <div class="drop"></div>
+
+            </div>
+
+            <div class="water-message">
+
+              <strong>Equilibrio</strong>
+
+              <span>
+                La hidratación adecuada depende de la persona,
+                actividad, clima y otras condiciones.
+              </span>
+
+            </div>
+
+          </div>
 
         </div>
 
@@ -2627,11 +3327,8 @@ footer p{
         <div class="analysis-block">
 
           <span class="verdict verdict-partial">
-
             <span class="verdict-dot"></span>
-
             Parcialmente respaldado
-
           </span>
 
         </div>
@@ -2676,12 +3373,10 @@ footer p{
       </h2>
 
       <p>
-
         La evidencia no obliga a aceptar o rechazar cada consejo
         en bloque. Permite distinguir entre principios respaldados,
         afirmaciones que requieren matices y elementos que pertenecen
         al ámbito de la fe.
-
       </p>
 
     </div>
@@ -2695,17 +3390,9 @@ footer p{
 
           <tr>
 
-            <th>
-              Consejo
-            </th>
-
-            <th>
-              Evidencia
-            </th>
-
-            <th>
-              Conclusión
-            </th>
+            <th>Consejo</th>
+            <th>Evidencia</th>
+            <th>Conclusión</th>
 
           </tr>
 
@@ -2715,13 +3402,9 @@ footer p{
 
           <tr>
 
-            <td>
-              Alimentación vegetal
-            </td>
+            <td>Alimentación vegetal</td>
 
-            <td>
-              Alta
-            </td>
+            <td>Alta</td>
 
             <td>
               <span class="verdict verdict-full">
@@ -2732,16 +3415,11 @@ footer p{
 
           </tr>
 
-
           <tr>
 
-            <td>
-              Actividad física
-            </td>
+            <td>Actividad física</td>
 
-            <td>
-              Muy alta
-            </td>
+            <td>Muy alta</td>
 
             <td>
               <span class="verdict verdict-full">
@@ -2752,16 +3430,11 @@ footer p{
 
           </tr>
 
-
           <tr>
 
-            <td>
-              Descanso y sueño
-            </td>
+            <td>Descanso y sueño</td>
 
-            <td>
-              Alta
-            </td>
+            <td>Alta</td>
 
             <td>
               <span class="verdict verdict-full">
@@ -2772,16 +3445,11 @@ footer p{
 
           </tr>
 
-
           <tr>
 
-            <td>
-              Relación mente-cuerpo
-            </td>
+            <td>Relación mente-cuerpo</td>
 
-            <td>
-              Alta
-            </td>
+            <td>Alta</td>
 
             <td>
               <span class="verdict verdict-full">
@@ -2792,16 +3460,11 @@ footer p{
 
           </tr>
 
-
           <tr>
 
-            <td>
-              Aire y naturaleza
-            </td>
+            <td>Aire y naturaleza</td>
 
-            <td>
-              Moderada–alta
-            </td>
+            <td>Moderada–alta</td>
 
             <td>
               <span class="verdict verdict-partial">
@@ -2812,16 +3475,11 @@ footer p{
 
           </tr>
 
-
           <tr>
 
-            <td>
-              Agua
-            </td>
+            <td>Agua</td>
 
-            <td>
-              Moderada / limitada
-            </td>
+            <td>Moderada / limitada</td>
 
             <td>
               <span class="verdict verdict-partial">
@@ -2858,12 +3516,10 @@ footer p{
       </h2>
 
       <p>
-
         El objetivo no fue probar científicamente una afirmación
         religiosa, sino contrastar los componentes relacionados
         con la salud y el estilo de vida utilizando fuentes
         científicas actuales.
-
       </p>
 
     </div>
@@ -2917,8 +3573,6 @@ footer p{
 
     <div class="biblio-grid">
 
-
-      <!-- WHITE -->
 
       <div>
 
@@ -3000,8 +3654,6 @@ footer p{
 
       </div>
 
-
-      <!-- ORGANISMOS -->
 
       <div>
 
@@ -3117,8 +3769,6 @@ footer p{
       </div>
 
 
-      <!-- ARTÍCULOS 1 -->
-
       <div>
 
         <div class="biblio-group-title">
@@ -3199,8 +3849,6 @@ footer p{
 
       </div>
 
-
-      <!-- ARTÍCULOS 2 -->
 
       <div>
 
@@ -3356,3 +4004,4 @@ footer p{
 
 </body>
 </html>
+```
