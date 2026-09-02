@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -21,31 +20,27 @@
 ========================================================= */
 
 :root{
-  --paper:#f4f1e7;
-  --paper-dark:#e9e5d7;
-  --white:#fffdf7;
+  --paper:#F3EEF1;
+  --paper-dark:#EAD9DE;
+  --white:#FFFBFA;
 
-  --forest:#263d30;
-  --forest-dark:#1c2e24;
-  --forest-light:#48634f;
+  --forest:#8A4459;
+  --forest-dark:#5C2C3C;
+  --forest-light:#D56989;
 
-  --gold:#a17b35;
-  --gold-light:#c5a35d;
+  --gold:#7C9C4E;
+  --gold-light:#C2DC80;
 
-  --ink:#22241f;
-  --muted:#64645c;
+  --ink:#3A2A30;
+  --muted:#8B7680;
 
-  --line:#d7d2c2;
+  --line:#E3D3D8;
 
   --serif:"Playfair Display", Georgia, serif;
   --sans:"DM Sans", Arial, sans-serif;
 
-  --shadow:0 18px 50px rgba(28,46,36,.08);
+  --shadow:0 18px 50px rgba(92,44,60,.08);
 }
-
-/* =========================================================
-   RESET
-========================================================= */
 
 *{
   box-sizing:border-box;
@@ -79,10 +74,6 @@ button{
   font-family:inherit;
 }
 
-/* =========================================================
-   NAVIGATION
-========================================================= */
-
 .nav{
   position:fixed;
   top:0;
@@ -90,7 +81,7 @@ button{
   right:0;
   z-index:1000;
 
-  background:rgba(28,46,36,.94);
+  background:rgba(92,44,60,.94);
   backdrop-filter:blur(12px);
 
   border-bottom:1px solid rgba(255,255,255,.08);
@@ -110,7 +101,7 @@ button{
 }
 
 .nav-brand{
-  color:#f4f1e7;
+  color:#F3EEF1;
   text-decoration:none;
 
   font-family:var(--serif);
@@ -122,12 +113,12 @@ button{
 
 .nav-links{
   display:flex;
-  gap:22px;
+  gap:20px;
   align-items:center;
 }
 
 .nav-links a{
-  color:#dce4d9;
+  color:#EAD3DA;
   text-decoration:none;
   font-size:13px;
   font-weight:500;
@@ -139,7 +130,7 @@ button{
   color:#fff;
 }
 
-@media(max-width:800px){
+@media(max-width:850px){
 
   .nav-links{
     display:none;
@@ -151,10 +142,6 @@ button{
 
 }
 
-/* =========================================================
-   GENERAL
-========================================================= */
-
 .container{
   width:min(1180px, calc(100% - 48px));
   margin:auto;
@@ -164,10 +151,6 @@ section{
   width:100%;
 }
 
-/* =========================================================
-   HERO
-========================================================= */
-
 .hero{
   min-height:700px;
 
@@ -175,10 +158,10 @@ section{
   align-items:center;
 
   background:
-    radial-gradient(circle at 80% 30%, rgba(161,123,53,.16), transparent 32%),
-    linear-gradient(135deg,#263d30,#1c2e24);
+    radial-gradient(circle at 80% 30%, rgba(124,156,78,.16), transparent 32%),
+    linear-gradient(135deg,#8A4459,#5C2C3C);
 
-  color:#f5f2e8;
+  color:#F6EDEF;
 
   position:relative;
   overflow:hidden;
@@ -209,7 +192,7 @@ section{
   width:420px;
   height:420px;
 
-  border:1px solid rgba(197,163,93,.15);
+  border:1px solid rgba(194,220,128,.15);
   border-radius:50%;
 
   right:-50px;
@@ -225,7 +208,7 @@ section{
   font-family:var(--serif);
   font-style:italic;
 
-  color:#c5d0c4;
+  color:#E9C9D3;
 
   font-size:20px;
 
@@ -252,7 +235,7 @@ section{
 
   line-height:1.7;
 
-  color:#dbe2d8;
+  color:#F0DCE1;
 
   margin:0 0 42px;
 }
@@ -281,18 +264,18 @@ section{
 }
 
 .button-primary{
-  background:#c5a35d;
-  color:#1c2e24;
+  background:#C2DC80;
+  color:#5C2C3C;
 }
 
 .button-primary:hover{
-  background:#d6b873;
+  background:#CFE39A;
   transform:translateY(-2px);
 }
 
 .button-secondary{
   border:1px solid rgba(255,255,255,.28);
-  color:#f4f1e7;
+  color:#F3EEF1;
 }
 
 .button-secondary:hover{
@@ -305,7 +288,7 @@ section{
   display:grid;
   grid-template-columns:repeat(3,1fr);
 
-  max-width:720px;
+  max-width:760px;
 
   border-top:1px solid rgba(255,255,255,.18);
   padding-top:24px;
@@ -314,14 +297,14 @@ section{
 }
 
 .hero-meta-item{
-  color:#bfc9bb;
+  color:#C9B6BE;
   font-size:13px;
 }
 
 .hero-meta-item strong{
   display:block;
 
-  color:#f4f1e7;
+  color:#F3EEF1;
 
   font-size:14px;
 
@@ -340,10 +323,6 @@ section{
   }
 
 }
-
-/* =========================================================
-   INTRO
-========================================================= */
 
 .intro{
   background:var(--paper-dark);
@@ -374,7 +353,7 @@ section{
 .intro-text{
   max-width:780px;
 
-  color:#55564f;
+  color:#5C4A50;
 
   font-size:17px;
 }
@@ -399,10 +378,6 @@ section{
   }
 
 }
-
-/* =========================================================
-   CHAPTER
-========================================================= */
 
 .chapter{
   padding:100px 0;
@@ -451,10 +426,6 @@ section{
   font-size:15px;
 }
 
-/* =========================================================
-   DIALOGUE CARD
-========================================================= */
-
 .dialogue{
   display:grid;
 
@@ -469,14 +440,10 @@ section{
   overflow:hidden;
 }
 
-/* =========================================================
-   QUOTE
-========================================================= */
-
 .quote{
   background:var(--forest);
 
-  color:#f5f2e8;
+  color:#F6EDEF;
 
   padding:48px;
 
@@ -491,7 +458,7 @@ section{
 .quote-symbol{
   font-family:var(--serif);
 
-  color:#c5a35d;
+  color:#C2DC80;
 
   font-size:54px;
 
@@ -515,7 +482,7 @@ section{
 
   padding-top:18px;
 
-  color:#bfc9bb;
+  color:#C9B6BE;
 
   font-size:13px;
 
@@ -527,7 +494,7 @@ section{
 
   margin-top:8px;
 
-  color:#d6b873;
+  color:#CFE39A;
 
   text-decoration:none;
 
@@ -537,10 +504,6 @@ section{
 .source-link:hover{
   text-decoration:underline;
 }
-
-/* =========================================================
-   ANALYSIS
-========================================================= */
 
 .analysis{
   padding:48px;
@@ -602,10 +565,6 @@ section{
   text-decoration:underline;
 }
 
-/* =========================================================
-   VERDICT
-========================================================= */
-
 .verdict{
   display:inline-flex;
 
@@ -630,31 +589,27 @@ section{
 }
 
 .verdict-full{
-  background:#e0e9df;
-  color:#284a34;
+  background:#E4F0D2;
+  color:#3F5A28;
 }
 
 .verdict-full .verdict-dot{
-  background:#486f50;
+  background:#6B8F3E;
 }
 
 .verdict-partial{
-  background:#f2e7cf;
-  color:#63491c;
+  background:#F7E0E6;
+  color:#7A3348;
 }
 
 .verdict-partial .verdict-dot{
-  background:#b08a3e;
+  background:#D56989;
 }
-
-/* =========================================================
-   INFOGRAPHICS
-========================================================= */
 
 .infographic{
   margin:35px 0;
 
-  background:#f7f4eb;
+  background:#F7F0EF;
 
   border:1px solid var(--line);
 
@@ -683,10 +638,6 @@ section{
   font-size:12px;
   margin-top:10px;
 }
-
-/* =========================================================
-   FOOD INFOGRAPHIC
-========================================================= */
 
 .food-graphic{
   display:grid;
@@ -739,10 +690,6 @@ section{
 
 }
 
-/* =========================================================
-   EXERCISE INFOGRAPHIC
-========================================================= */
-
 .activity-meter{
   position:relative;
 
@@ -752,7 +699,7 @@ section{
 .activity-track{
   height:26px;
 
-  background:#e2ded2;
+  background:#EAD9DE;
 
   border-radius:13px;
 
@@ -832,10 +779,6 @@ section{
 
   color:var(--forest);
 }
-
-/* =========================================================
-   SLEEP INFOGRAPHIC
-========================================================= */
 
 .sleep-graphic{
   display:flex;
@@ -976,10 +919,6 @@ section{
 
 }
 
-/* =========================================================
-   MIND-BODY INFOGRAPHIC
-========================================================= */
-
 .mind-body{
   position:relative;
 
@@ -1002,7 +941,7 @@ section{
 
   border:2px solid var(--forest);
 
-  background:#e0e9df;
+  background:#E4F0D2;
 
   display:flex;
 
@@ -1109,10 +1048,6 @@ section{
 
 }
 
-/* =========================================================
-   AIR INFOGRAPHIC
-========================================================= */
-
 .air-scene{
   height:180px;
 
@@ -1180,7 +1115,7 @@ section{
   top:28px;
   left:58px;
 
-  background:#f2e7cf;
+  background:#F7E0E6;
 }
 
 .air-window::before{
@@ -1270,7 +1205,7 @@ section{
 
   border-radius:50%;
 
-  background:#dfe8de;
+  background:#E4F0D2;
   border:2px solid var(--forest);
 }
 
@@ -1295,10 +1230,6 @@ section{
 
   font-weight:600;
 }
-
-/* =========================================================
-   WATER INFOGRAPHIC
-========================================================= */
 
 .water-graphic{
   display:flex;
@@ -1338,7 +1269,7 @@ section{
 
   height:62%;
 
-  background:#dce9e2;
+  background:#F7E0E6;
 
   border-top:2px solid var(--gold);
 }
@@ -1369,7 +1300,7 @@ section{
   width:24px;
   height:32px;
 
-  background:#dfe9df;
+  background:#D9EDBB;
 
   border:2px solid var(--forest);
 
@@ -1410,10 +1341,6 @@ section{
 
 }
 
-/* =========================================================
-   REFLECTION
-========================================================= */
-
 .reflection{
   border-left:3px solid var(--gold);
 
@@ -1429,10 +1356,6 @@ section{
 .reflection strong{
   color:var(--ink);
 }
-
-/* =========================================================
-   MOBILE CARDS
-========================================================= */
 
 @media(max-width:850px){
 
@@ -1454,10 +1377,6 @@ section{
   }
 
 }
-
-/* =========================================================
-   BALANCE
-========================================================= */
 
 .balance{
   padding:100px 0;
@@ -1521,7 +1440,7 @@ section{
 .balance-table th{
   background:var(--forest);
 
-  color:#f4f1e7;
+  color:#F3EEF1;
 
   font-weight:600;
 }
@@ -1531,15 +1450,133 @@ section{
 }
 
 /* =========================================================
-   METHODOLOGY
+   PURPOSE (REFLEXIÓN FINAL)
 ========================================================= */
+
+.purpose{
+  padding:100px 0;
+
+  background:var(--forest);
+
+  color:#F6EDEF;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.purpose::after{
+  content:"";
+
+  position:absolute;
+
+  width:480px;
+  height:480px;
+
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+
+  left:-200px;
+  bottom:-220px;
+}
+
+.purpose-grid{
+  display:grid;
+
+  grid-template-columns:240px 1fr;
+
+  gap:70px;
+
+  position:relative;
+  z-index:2;
+}
+
+.purpose-label{
+  font-family:var(--serif);
+  font-style:italic;
+
+  font-size:20px;
+
+  color:#C2DC80;
+}
+
+.purpose-text h2{
+  font-family:var(--serif);
+
+  font-weight:500;
+
+  font-size:clamp(30px,4vw,42px);
+
+  margin:0 0 24px;
+
+  color:#fdfaf2;
+}
+
+.purpose-text p{
+  max-width:680px;
+
+  font-size:16.5px;
+
+  color:#F0DCE1;
+
+  margin:0 0 18px;
+}
+
+.purpose-text p:last-of-type{
+  margin-bottom:0;
+}
+
+.purpose-verse{
+  margin:28px 0;
+
+  padding:24px 28px;
+
+  max-width:640px;
+
+  background:rgba(255,255,255,.06);
+
+  border-left:3px solid #C2DC80;
+}
+
+.purpose-verse p{
+  margin:0 0 8px;
+
+  font-family:var(--serif);
+
+  font-style:italic;
+
+  font-size:20px;
+
+  line-height:1.5;
+
+  color:#fdfaf2;
+}
+
+.purpose-verse cite{
+  font-style:normal;
+
+  font-size:13px;
+
+  color:#C9B6BE;
+
+  letter-spacing:.02em;
+}
+
+@media(max-width:700px){
+
+  .purpose-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+}
 
 .methodology{
   padding:90px 0;
 
-  background:var(--forest);
+  background:var(--forest-dark);
 
-  color:#f4f1e7;
+  color:#F3EEF1;
 }
 
 .methodology-grid{
@@ -1561,7 +1598,7 @@ section{
 }
 
 .methodology p{
-  color:#cbd5c9;
+  color:#E3C4CE;
 
   font-size:15px;
 }
@@ -1578,7 +1615,7 @@ section{
 
   border-bottom:1px solid rgba(255,255,255,.12);
 
-  color:#dbe2d8;
+  color:#F0DCE1;
 
   font-size:14px;
 }
@@ -1595,10 +1632,6 @@ section{
   }
 
 }
-
-/* =========================================================
-   BIBLIOGRAPHY
-========================================================= */
 
 .bibliography{
   padding:100px 0;
@@ -1674,14 +1707,10 @@ section{
 
 }
 
-/* =========================================================
-   FOOTER
-========================================================= */
-
 footer{
   background:var(--forest-dark);
 
-  color:#b8c3b7;
+  color:#D4AEBA;
 
   padding:50px 0;
 }
@@ -1695,7 +1724,7 @@ footer{
 }
 
 footer strong{
-  color:#f4f1e7;
+  color:#F3EEF1;
 
   font-family:var(--serif);
 
@@ -1708,6 +1737,14 @@ footer p{
   line-height:1.7;
 }
 
+.footer-credit{
+  margin-top:10px;
+
+  font-size:13px;
+
+  color:#F0DCE1;
+}
+
 @media(max-width:700px){
 
   .footer-grid{
@@ -1716,10 +1753,6 @@ footer p{
   }
 
 }
-
-/* =========================================================
-   BACK TO TOP
-========================================================= */
 
 .top{
   position:fixed;
@@ -1757,10 +1790,6 @@ footer p{
   background:var(--forest-light);
 }
 
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
-
 @media(prefers-reduced-motion:reduce){
 
   html{
@@ -1777,10 +1806,6 @@ footer p{
 </head>
 
 <body id="top">
-
-<!-- ======================================================
-     NAV
-====================================================== -->
 
 <nav class="nav">
 
@@ -1799,6 +1824,7 @@ footer p{
       <a href="#aire">Aire</a>
       <a href="#agua">Agua</a>
       <a href="#resumen">Balance</a>
+      <a href="#proposito">Reflexión</a>
       <a href="#bibliografia">Fuentes</a>
 
     </div>
@@ -1807,10 +1833,6 @@ footer p{
 
 </nav>
 
-
-<!-- ======================================================
-     HERO
-====================================================== -->
 
 <header class="hero">
 
@@ -1852,13 +1874,13 @@ footer p{
       </div>
 
       <div class="hero-meta-item">
-        <strong>Fuentes</strong>
-        OMS · CDC · PubMed
+        <strong>Grupo</strong>
+        Dafne Aneth Jiménez Cruz · Lucía Pignataro Dávila
       </div>
 
       <div class="hero-meta-item">
-        <strong>Alcance</strong>
-        Seis consejos analizados
+        <strong>Fuentes</strong>
+        OMS · CDC · PubMed
       </div>
 
     </div>
@@ -1867,10 +1889,6 @@ footer p{
 
 </header>
 
-
-<!-- ======================================================
-     INTRODUCCIÓN
-====================================================== -->
 
 <section class="intro">
 
@@ -1906,10 +1924,6 @@ footer p{
 
 <main>
 
-
-<!-- ======================================================
-     I — ALIMENTACIÓN
-====================================================== -->
 
 <section class="chapter" id="alimentacion">
 
@@ -2051,8 +2065,6 @@ footer p{
         </div>
 
 
-        <!-- GRÁFICO MEJORADO DE ALIMENTACIÓN -->
-
         <div class="infographic">
 
           <div class="infographic-title">
@@ -2061,7 +2073,6 @@ footer p{
 
           <div class="food-graphic">
 
-            <!-- CEREALES -->
             <div class="food-item">
 
               <div class="food-icon">
@@ -2071,35 +2082,35 @@ footer p{
                   <path
                     d="M50 88 C48 65 47 38 50 14"
                     fill="none"
-                    stroke="#263d30"
+                    stroke="#8A4459"
                     stroke-width="4"
                     stroke-linecap="round"/>
 
                   <path
                     d="M49 35 C35 28 28 20 30 14"
                     fill="none"
-                    stroke="#48634f"
+                    stroke="#D56989"
                     stroke-width="5"
                     stroke-linecap="round"/>
 
                   <path
                     d="M49 48 C65 41 72 32 70 25"
                     fill="none"
-                    stroke="#48634f"
+                    stroke="#D56989"
                     stroke-width="5"
                     stroke-linecap="round"/>
 
                   <path
                     d="M48 60 C34 54 27 47 29 40"
                     fill="none"
-                    stroke="#48634f"
+                    stroke="#D56989"
                     stroke-width="5"
                     stroke-linecap="round"/>
 
                   <path
                     d="M50 25 C61 18 66 12 64 8"
                     fill="none"
-                    stroke="#a17b35"
+                    stroke="#7C9C4E"
                     stroke-width="4"
                     stroke-linecap="round"/>
 
@@ -2114,7 +2125,6 @@ footer p{
             </div>
 
 
-            <!-- FRUTAS -->
             <div class="food-item">
 
               <div class="food-icon">
@@ -2125,29 +2135,29 @@ footer p{
                     cx="40"
                     cy="55"
                     r="25"
-                    fill="#e0e9df"
-                    stroke="#48634f"
+                    fill="#E4F0D2"
+                    stroke="#D56989"
                     stroke-width="3"/>
 
                   <circle
                     cx="66"
                     cy="58"
                     r="22"
-                    fill="#f2e7cf"
-                    stroke="#a17b35"
+                    fill="#F7E0E6"
+                    stroke="#7C9C4E"
                     stroke-width="3"/>
 
                   <path
                     d="M52 32 C56 20 65 15 74 17"
                     fill="none"
-                    stroke="#263d30"
+                    stroke="#8A4459"
                     stroke-width="4"
                     stroke-linecap="round"/>
 
                   <path
                     d="M60 25 C69 18 78 21 81 27"
                     fill="none"
-                    stroke="#48634f"
+                    stroke="#D56989"
                     stroke-width="4"
                     stroke-linecap="round"/>
 
@@ -2155,13 +2165,13 @@ footer p{
                     cx="33"
                     cy="48"
                     r="3"
-                    fill="#a17b35"/>
+                    fill="#7C9C4E"/>
 
                   <circle
                     cx="71"
                     cy="54"
                     r="3"
-                    fill="#48634f"/>
+                    fill="#D56989"/>
 
                 </svg>
 
@@ -2174,7 +2184,6 @@ footer p{
             </div>
 
 
-            <!-- FRUTOS SECOS -->
             <div class="food-item">
 
               <div class="food-icon">
@@ -2183,26 +2192,26 @@ footer p{
 
                   <path
                     d="M28 65 C20 48 30 28 48 26 C67 24 78 41 72 58 C67 74 42 79 28 65 Z"
-                    fill="#e9e5d7"
-                    stroke="#a17b35"
+                    fill="#EAD9DE"
+                    stroke="#7C9C4E"
                     stroke-width="3"/>
 
                   <path
                     d="M52 27 C48 42 49 57 58 70"
                     fill="none"
-                    stroke="#48634f"
+                    stroke="#D56989"
                     stroke-width="3"/>
 
                   <path
                     d="M39 37 C35 47 37 58 42 65"
                     fill="none"
-                    stroke="#48634f"
+                    stroke="#D56989"
                     stroke-width="2"/>
 
                   <path
                     d="M62 38 C66 48 65 58 62 64"
                     fill="none"
-                    stroke="#48634f"
+                    stroke="#D56989"
                     stroke-width="2"/>
 
                 </svg>
@@ -2216,7 +2225,6 @@ footer p{
             </div>
 
 
-            <!-- LEGUMBRES -->
             <div class="food-item">
 
               <div class="food-icon">
@@ -2225,32 +2233,32 @@ footer p{
 
                   <path
                     d="M20 62 C22 45 38 34 57 36 C74 38 84 50 80 64 C75 81 48 85 31 77 C23 74 19 69 20 62 Z"
-                    fill="#e0e9df"
-                    stroke="#48634f"
+                    fill="#E4F0D2"
+                    stroke="#D56989"
                     stroke-width="3"/>
 
                   <circle
                     cx="38"
                     cy="58"
                     r="8"
-                    fill="#f4f1e7"
-                    stroke="#a17b35"
+                    fill="#F3EEF1"
+                    stroke="#7C9C4E"
                     stroke-width="2"/>
 
                   <circle
                     cx="56"
                     cy="52"
                     r="8"
-                    fill="#f4f1e7"
-                    stroke="#a17b35"
+                    fill="#F3EEF1"
+                    stroke="#7C9C4E"
                     stroke-width="2"/>
 
                   <circle
                     cx="65"
                     cy="67"
                     r="8"
-                    fill="#f4f1e7"
-                    stroke="#a17b35"
+                    fill="#F3EEF1"
+                    stroke="#7C9C4E"
                     stroke-width="2"/>
 
                 </svg>
@@ -2264,7 +2272,6 @@ footer p{
             </div>
 
 
-            <!-- VERDURAS -->
             <div class="food-item">
 
               <div class="food-icon">
@@ -2274,31 +2281,31 @@ footer p{
                   <path
                     d="M50 80 C49 61 48 42 50 25"
                     fill="none"
-                    stroke="#263d30"
+                    stroke="#8A4459"
                     stroke-width="4"/>
 
                   <path
                     d="M50 35 C37 25 26 25 20 34 C30 42 40 43 50 35 Z"
-                    fill="#dfe9df"
-                    stroke="#48634f"
+                    fill="#D9EDBB"
+                    stroke="#D56989"
                     stroke-width="2"/>
 
                   <path
                     d="M50 43 C64 30 76 31 82 40 C71 48 60 50 50 43 Z"
-                    fill="#e0e9df"
-                    stroke="#48634f"
+                    fill="#E4F0D2"
+                    stroke="#D56989"
                     stroke-width="2"/>
 
                   <path
                     d="M49 53 C36 45 25 48 22 57 C32 63 42 62 49 53 Z"
-                    fill="#dfe9df"
-                    stroke="#48634f"
+                    fill="#D9EDBB"
+                    stroke="#D56989"
                     stroke-width="2"/>
 
                   <path
                     d="M51 59 C64 51 75 55 78 64 C67 68 58 67 51 59 Z"
-                    fill="#e0e9df"
-                    stroke="#48634f"
+                    fill="#E4F0D2"
+                    stroke="#D56989"
                     stroke-width="2"/>
 
                 </svg>
@@ -2350,10 +2357,6 @@ footer p{
 
 </section>
 
-
-<!-- ======================================================
-     II — EJERCICIO
-====================================================== -->
 
 <section class="chapter" id="ejercicio">
 
@@ -2491,8 +2494,6 @@ footer p{
         </div>
 
 
-        <!-- GRÁFICO DE EJERCICIO -->
-
         <div class="infographic">
 
           <div class="infographic-title">
@@ -2559,10 +2560,6 @@ footer p{
 
 </section>
 
-
-<!-- ======================================================
-     III — DESCANSO
-====================================================== -->
 
 <section class="chapter" id="descanso">
 
@@ -2699,8 +2696,6 @@ footer p{
         </div>
 
 
-        <!-- GRÁFICO DE SUEÑO -->
-
         <div class="infographic">
 
           <div class="infographic-title">
@@ -2767,10 +2762,6 @@ footer p{
 
 </section>
 
-
-<!-- ======================================================
-     IV — MENTE
-====================================================== -->
 
 <section class="chapter" id="mente">
 
@@ -2884,8 +2875,6 @@ footer p{
         </div>
 
 
-        <!-- GRÁFICO MENTE-CUERPO -->
-
         <div class="infographic">
 
           <div class="infographic-title">
@@ -2956,10 +2945,6 @@ footer p{
 
 </section>
 
-
-<!-- ======================================================
-     V — AIRE
-====================================================== -->
 
 <section class="chapter" id="aire">
 
@@ -3097,8 +3082,6 @@ footer p{
         </div>
 
 
-        <!-- GRÁFICO AIRE -->
-
         <div class="infographic">
 
           <div class="infographic-title">
@@ -3163,10 +3146,6 @@ footer p{
 
 </section>
 
-
-<!-- ======================================================
-     VI — AGUA
-====================================================== -->
 
 <section class="chapter" id="agua">
 
@@ -3280,8 +3259,6 @@ footer p{
         </div>
 
 
-        <!-- GRÁFICO AGUA -->
-
         <div class="infographic">
 
           <div class="infographic-title">
@@ -3357,10 +3334,6 @@ footer p{
 
 </main>
 
-
-<!-- ======================================================
-     BALANCE
-====================================================== -->
 
 <section class="balance" id="resumen">
 
@@ -3501,9 +3474,54 @@ footer p{
 </section>
 
 
-<!-- ======================================================
-     METODOLOGÍA
-====================================================== -->
+<section class="purpose" id="proposito">
+
+  <div class="container purpose-grid">
+
+    <div class="purpose-label">
+      Reflexión final
+    </div>
+
+    <div class="purpose-text">
+
+      <h2>
+        Salud: ciencia y propósito
+      </h2>
+
+      <p>
+        La salud es un equilibrio complejo de procesos físicos,
+        mentales y sociales que la ciencia nos permite comprender
+        y cuidar. Sin embargo, desde la perspectiva bíblica, la
+        salud también es un regalo y una responsabilidad.
+      </p>
+
+      <p>
+        La ciencia nos ayuda a entender cómo funciona nuestro
+        cuerpo; la fe nos recuerda por qué debemos cuidarlo.
+      </p>
+
+      <div class="purpose-verse">
+
+        <p>
+          “Deseo que tú seas prosperado en todas las cosas,
+          y que tengas salud.”
+        </p>
+
+        <cite>3 Juan 1:2</cite>
+
+      </div>
+
+      <p>
+        Cuidar la salud es, entonces, cuidar la vida que Dios
+        nos ha confiado.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
 
 <section class="methodology">
 
@@ -3557,10 +3575,6 @@ footer p{
 
 </section>
 
-
-<!-- ======================================================
-     BIBLIOGRAFÍA
-====================================================== -->
 
 <section class="bibliography" id="bibliografia">
 
@@ -3953,10 +3967,6 @@ footer p{
 </section>
 
 
-<!-- ======================================================
-     FOOTER
-====================================================== -->
-
 <footer>
 
   <div class="container footer-grid">
@@ -3969,6 +3979,10 @@ footer p{
 
       <p>
         Trabajo de investigación — Universidad de Montemorelos.
+      </p>
+
+      <p class="footer-credit">
+        Dafne Aneth Jiménez Cruz · Lucía Pignataro Dávila
       </p>
 
     </div>
@@ -4004,4 +4018,3 @@ footer p{
 
 </body>
 </html>
-```
